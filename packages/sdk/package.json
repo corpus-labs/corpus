@@ -1,0 +1,17 @@
+{
+  "name": "@corpus-labs/sdk",
+  "version": "1.0.0",
+  "description": "A library of reusable components created with bit.dev.",
+  "author": "miko <mikostel@gmail.com>",
+  "homepage": "https://github.com/corpus-labs/corpus-ts#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corpus-labs/corpus-ts.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/corpus-labs/corpus-ts/issues"
+  }
+}
