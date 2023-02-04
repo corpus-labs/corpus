@@ -3,16 +3,7 @@ import {
   ConnectionProvider,
   WalletProvider,
 } from '@solana/wallet-adapter-react'
-import {
-  getLedgerWallet,
-  getPhantomWallet,
-  getSlopeWallet,
-  getSolflareWallet,
-  getSolletExtensionWallet,
-  getSolletWallet,
-  getTorusWallet,
-} from '@solana/wallet-adapter-wallets'
-import { clusterApiUrl } from '@solana/web3.js'
+import { PhantomWalletAdapter } from '@solana/wallet-adapter-wallets'
 import { FC, ReactNode, useMemo } from 'react'
 
 export const WalletConnectionProvider: FC<{ children: ReactNode }> = ({
@@ -23,11 +14,11 @@ export const WalletConnectionProvider: FC<{ children: ReactNode }> = ({
 
   // You can also provide a custom RPC endpoint
   const endpoint =
-    'https://solana-mainnet.g.alchemy.com/v2/WXQ4monX3PHqWy7JACoAnDf4EtUZUpr2'
+    'https://serene-fabled-pallet.solana-mainnet.discover.quiknode.pro/33bbe6f54900b7a54d92a67100e01289f457c997/'
 
   // @solana/wallet-adapter-wallets includes all the adapters but supports tree shaking --
   // Only the wallets you configure here will be compiled into your application
-  const wallets = useMemo(() => [getPhantomWallet()], [network])
+  const wallets = useMemo(() => [new PhantomWalletAdapter()], [network])
 
   return (
     <ConnectionProvider endpoint={endpoint}>

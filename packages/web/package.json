@@ -1,0 +1,44 @@
+{
+  "name": "@corpus-labs/app",
+  "author": "miko <miko@corpus.app>",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroicons/react": "^1.0.5",
+    "@openbook-dex/openbook": "^0.0.4",
+    "@openbook-dex/swap": "^0.0.4",
+    "@openbook-dex/tokens": "^0.0.4",
+    "@solana/spl-token": "^0.3.7",
+    "@solana/spl-token-registry": "^0.2.819",
+    "@solana/wallet-adapter-base": "^0.9.20",
+    "@solana/wallet-adapter-react": "^0.15.26",
+    "@solana/wallet-adapter-react-ui": "^0.9.24",
+    "@solana/wallet-adapter-wallets": "^0.19.9",
+    "@solana/web3.js": "^1.73.0",
+    "buffer-layout": "^1.2.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "next": "^12.2.5",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "16.11.12",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "autoprefixer": "^10.4.0",
+    "clsx": "^1.1.1",
+    "eslint": "8.4.1",
+    "eslint-config-next": "12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "next-transpile-modules": "^9.0.0",
+    "postcss": "^8.4.4",
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.1.4",
+    "typescript": "4.5.3"
+  }
+}

@@ -21,7 +21,7 @@ const WalletConnectionProvider = dynamic<{ children: ReactNode }>(
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <WalletConnectionProvider>
-      <WalletModalProvider logo={'./favicon.svg'}>
+      <WalletModalProvider>
         <MarketProvider>
           <Component {...pageProps} />
         </MarketProvider>

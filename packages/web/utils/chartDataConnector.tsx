@@ -9,7 +9,7 @@ export interface ChartTradeType {
   marketAddress: string
 }
 
-const baseUrl = 'http://143.198.168.136:3000'
+const baseUrl = 'http://api.corpus.app'
 
 export default class ChartApi {
   static URL = `${baseUrl}/`

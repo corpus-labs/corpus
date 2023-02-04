@@ -1,6 +1,3 @@
-// Modified version of @solana/wallet-adapter-react-ui/WalletMultiButton:
-// Calls new onDisconnect function to close dropdown menu on disconnect
-
 import React, { VFC } from 'react'
 import { StarIcon, InformationCircleIcon } from '@heroicons/react/outline'
 import clsx from 'clsx'

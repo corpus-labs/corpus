@@ -16,7 +16,14 @@ import {
   WalletConnectButton,
   WalletModalButton,
 } from '@solana/wallet-adapter-react-ui'
-import { Button, ButtonProps } from '@solana/wallet-adapter-react-ui/src/Button'
+// import { Button, ButtonProps } from '@solana/wallet-adapter-react-ui/src/Button'
+import dynamic from 'next/dynamic'
+
+const WalletMultiButtonDynamic = dynamic(
+  async () =>
+    (await import('@solana/wallet-adapter-react-ui')).WalletConnectButton,
+  { ssr: false }
+)
 
 export const WalletButton: FC<ButtonProps> = ({ children, ...props }) => {
   const { publicKey, wallet, disconnect } = useWallet()
@@ -81,7 +88,7 @@ export const WalletButton: FC<ButtonProps> = ({ children, ...props }) => {
 
   return (
     <div className="wallet-adapter-dropdown">
-      <Button
+      {/* <Button
         aria-expanded={active}
         className="wallet-adapter-button-trigger"
         style={{ pointerEvents: active ? 'none' : 'auto', ...props.style }}
@@ -90,7 +97,8 @@ export const WalletButton: FC<ButtonProps> = ({ children, ...props }) => {
         {...props}
       >
         {content}
-      </Button>
+      </Button> */}
+      <WalletConnectButton />
       <ul
         aria-label="dropdown-list"
         className={`wallet-adapter-dropdown-list border overflow-hidden text-center border-zinc-800 ${

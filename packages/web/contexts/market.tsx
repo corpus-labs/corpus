@@ -35,8 +35,6 @@ export const MarketProvider: FC = ({ children }) => {
     setMarket(market)
   }
 
-  console.log('market', market)
-
   const fetchOhlcv = useCallback(async () => {
     const today = new Date()
     const yesterday = new Date(today)

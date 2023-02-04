@@ -1,4 +1,4 @@
-import React, { VFC, ChangeEvent, FormEvent, useState, useEffect } from 'react'
+import React, { ChangeEvent, FormEvent, useState, useEffect } from 'react'
 import { PublicKey, Transaction } from '@solana/web3.js'
 import { useWallet, useConnection } from '@solana/wallet-adapter-react'
 import { useMarketContext } from '../../contexts/market'
@@ -9,7 +9,7 @@ import { Input } from '../atoms/Input'
 import { useAssociatedTokenAccount } from '../../hooks/useAssociatedTokenAccount'
 import clsx from 'clsx'
 
-export const PositionForm: VFC = () => {
+export const PositionForm = () => {
   const wallet = useWallet()
   const { connection } = useConnection()
   const { market } = useMarketContext()
@@ -28,6 +28,10 @@ export const PositionForm: VFC = () => {
 
   const handleOrderTypeChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setOrderType(e.target.value)
+  }
+
+  const handleMarketOrder = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
   }
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {

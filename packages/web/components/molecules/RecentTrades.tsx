@@ -55,6 +55,7 @@ export const RecentTrades: VFC<RecentTradesProps> = ({ marketAddress }) => {
               className={clsx('flex justify-between px-4 py-1', {
                 'bg-zinc-800 bg-opacity-30': highlighted,
               })}
+              key={'trade-' + i}
             >
               <div
                 className={

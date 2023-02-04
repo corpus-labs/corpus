@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react'
+
 import { CHART_DATA_FEED } from '../../utils/chartDataConnector'
 import {
   widget,
