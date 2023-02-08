@@ -1,7 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://bit.dev/docs/workspace/workspace-configuration
- **/{
+ **/ {
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
   /**
    * main configuration of the Bit workspace.
@@ -30,9 +30,7 @@
     "defaultScope": "corpus.elements"
   },
   "teambit.component/issues": {
-    "ignoreIssues": [
-      "MissingPackagesDependenciesOnFs"
-    ]
+    "ignoreIssues": ["MissingPackagesDependenciesOnFs"]
   },
   /**
    * main configuration for component dependency resolution.
@@ -48,12 +46,12 @@
         "@bit-foundations/env-configs.typescript.jsx-transform": "0.0.1",
         "@bit-foundations/styling.tailwind.webpack-transformer": "0.0.6",
         "@metamask/detect-provider": "2.0.0",
-        "@metamask/key-tree": "^5.0.2",
         "@metamask/providers": "10.0.0",
-        "@metamask/snap-types": "^0.22.2",
-        "@metamask/snaps-cli": "^0.22.2",
         "@solana/web3.js": "1.66.0",
-        "@solendprotocol/solend-sdk": "0.7.0",
+        "@solana/wallet-adapter-base": "^0.9.20",
+        "@solana/wallet-adapter-react": "^0.15.26",
+        "@solana/wallet-adapter-react-ui": "^0.9.24",
+        "@solana/wallet-adapter-wallets": "^0.19.9",
         "@teambit/eslint-config-bit-react": "~0.0.367",
         "@teambit/harmony": "0.3.3",
         "@teambit/webpack.modules.style-regexps": "0.0.138",
@@ -62,7 +60,6 @@
         "@types/node": "18.11.0",
         "@types/react": "^18.0.21",
         "@types/react-dom": "^18.0.6",
-        "@types/testing-library__jest-dom": "5.14.5",
         "@typescript-eslint/eslint-plugin": "5.40.0",
         "clsx": "1.2.1",
         "core-js": "^3.25.5",

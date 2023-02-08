@@ -9,17 +9,56 @@
  */
 
 {
+    "dex/place-order": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "corpus.features",
+        "mainFile": "index.ts",
+        "rootDir": "features/dex/place-order",
+        "config": {
+            "corpus.utils/envs/tailwind-react": {},
+            "teambit.envs/envs": {
+                "env": "corpus.utils/envs/tailwind-react"
+            }
+        }
+    },
     "elements/button": {
         "scope": "corpus.design",
         "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "design/elements/button"
     },
+    "elements/tabs": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "corpus.design",
+        "mainFile": "index.ts",
+        "rootDir": "design/elements/tabs",
+        "config": {
+            "corpus.utils/envs/tailwind-react": {},
+            "teambit.envs/envs": {
+                "env": "corpus.utils/envs/tailwind-react"
+            }
+        }
+    },
     "envs/tailwind-react": {
         "scope": "corpus.utils",
         "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "utils/envs/tailwind-react"
+    },
+    "inputs/textfield": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "corpus.design",
+        "mainFile": "index.ts",
+        "rootDir": "design/inputs/textfield",
+        "config": {
+            "corpus.utils/envs/tailwind-react": {},
+            "teambit.envs/envs": {
+                "env": "corpus.utils/envs/tailwind-react"
+            }
+        }
     },
     "layouts/header": {
         "scope": "corpus.design",

@@ -3,8 +3,8 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf node_modules && lerna clean",
-    "start:app": "lerna run dev --scope @corpus-labs/web",
-    "build:app": "lerna run build --scope @corpus-labs/web"
+    "start:web": "lerna run dev --scope @corpus-labs/web",
+    "build:web": "lerna run build --scope @corpus-labs/web"
   },
   "workspaces": [
     "packages/*"
