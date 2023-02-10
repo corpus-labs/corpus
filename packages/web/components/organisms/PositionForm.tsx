@@ -8,7 +8,7 @@ import { Label } from '../atoms/Label'
 import { Input } from '../atoms/Input'
 import { useAssociatedTokenAccount } from '../../hooks/useAssociatedTokenAccount'
 import clsx from 'clsx'
-
+import { TOKEN_PROGRAM_ID } from '@solana/spl-token'
 export const PositionForm = () => {
   const wallet = useWallet()
   const { connection } = useConnection()
@@ -54,14 +54,15 @@ export const PositionForm = () => {
       connection
     )
 
+    const payer = side === 'buy' ? ata?.address : ata?.owner
     // Place order transaction
     const order = await market.makePlaceOrderTransaction(connection, {
       owner: wallet.publicKey,
-      payer: ata?.owner as PublicKey,
+      payer: payer,
       side: side, // 'buy' or 'sell'
       price: quoteCurrency,
       size: baseCurrency,
-      orderType: 'limit', // 'limit', 'ioc', 'postOnly'
+      orderType: 'postOnly', // 'limit', 'ioc', 'postOnly',
     })
 
     // Build transaction
