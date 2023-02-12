@@ -11,14 +11,17 @@ import { useConnection } from '@solana/wallet-adapter-react'
 import { useInterval } from '../hooks/useInterval'
 import ChartApi from '../utils/chartDataConnector'
 import { PublicKey } from '@solana/web3.js'
+import getConfig from 'next/config'
 
 const MarketContext = createContext({
   ohlcv: {},
   currentPrice: 0,
   market: null as any,
+  usdcRefAddress: undefined as string | undefined,
 })
 
 export const MarketProvider: FC = ({ children }) => {
+  const { publicRuntimeConfig } = getConfig()
   const { connection } = useConnection()
   const [ohlcv, setOhlcv] = useState<any>(null)
   const [market, setMarket] = useState<any>(null)
@@ -67,6 +70,7 @@ export const MarketProvider: FC = ({ children }) => {
         ohlcv,
         currentPrice: ohlcv?.c[ohlcv.c.length - 1],
         market,
+        usdcRefAddress: publicRuntimeConfig.USDC_REF_ADDRESS,
       }}
     >
       {children}

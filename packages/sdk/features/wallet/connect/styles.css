@@ -182,7 +182,7 @@
 }
 
 .wallet-adapter-modal-title {
-  @apply text-white text-lg text-centerfont-medium p-12;
+  @apply text-white text-xl text-center font-medium p-12;
 }
 
 @media (max-width: 374px) {

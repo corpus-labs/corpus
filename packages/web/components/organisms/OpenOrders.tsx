@@ -5,37 +5,32 @@ import { Order } from '@openbook-dex/openbook/lib/market'
 import clsx from 'clsx'
 import { Transaction } from '@solana/web3.js'
 
-export const OpenOrders: React.VFC = () => {
+export const OpenOrders: React.FC = () => {
   const { market } = useMarketContext()
   const { publicKey, sendTransaction } = useWallet()
   const { connection } = useConnection()
   const [openOrders, setOpenOrders] = useState<Order[] | null>(null)
 
-  const getOpenOrders = async () => {
-    if (market) {
-      const orders = await market.loadOrdersForOwner(
-        connection,
-        publicKey,
-        30000
-      )
-      const fills = await market.loadFills(connection, 10000)
-      const openOrdersAccounts = await market.findOpenOrdersAccountsForOwner(
-        connection,
-        publicKey
-      )
-      setOpenOrders(orders)
-    }
-  }
-
   useEffect(() => {
+    const getOpenOrders = async () => {
+      if (market && publicKey) {
+        const orders = await market.loadOrdersForOwner(
+          connection,
+          publicKey,
+          30000
+        )
+        setOpenOrders(orders)
+      }
+    }
+
     if (!openOrders) {
       getOpenOrders()
     }
-  }, [getOpenOrders, openOrders])
+  }, [connection, market, openOrders, publicKey])
 
   return (
     <div className={clsx('flex flex-col w-full')}>
-      {openOrders?.map((order) => {
+      {openOrders?.map((order, index) => {
         const handleCancel = async () => {
           const { blockhash, lastValidBlockHeight } =
             await connection.getLatestBlockhash()
@@ -58,6 +53,7 @@ export const OpenOrders: React.VFC = () => {
         }
         return (
           <div
+            key={index}
             className={clsx(
               'flex space-x-8 w-full text-sm border-b border-zinc-800 py-4'
             )}

@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import {
   ConnectionProvider,
-  WalletProvider,
+  WalletProvider as WalletAdapterProvider,
 } from '@solana/wallet-adapter-react';
 import { PhantomWalletAdapter } from '@solana/wallet-adapter-wallets';
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
-import { Connect } from './connect';
 
-const Context: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export type WalletProps = {
+  /**
+   * a node to be rendered in the special component.
+   */
+  children?: ReactNode;
+};
+
+export function WalletProvider({ children }: WalletProps) {
   // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
   const network = WalletAdapterNetwork.Devnet;
 
@@ -24,19 +30,10 @@ const Context: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets} autoConnect>
+      <WalletAdapterProvider wallets={wallets} autoConnect>
         <WalletModalProvider>{children}</WalletModalProvider>
-      </WalletProvider>
+      </WalletAdapterProvider>
     </ConnectionProvider>
   );
 };
-
-export const BasicConnect = () => {
-  return (
-    <Context>
-      <div className="p-4">
-        <Connect />
-      </div>
-    </Context>
-  );
-};
+}

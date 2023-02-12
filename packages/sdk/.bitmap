@@ -9,6 +9,19 @@
  */
 
 {
+    "contexts/wallet": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "corpus.utils",
+        "mainFile": "index.ts",
+        "rootDir": "utils/contexts/wallet",
+        "config": {
+            "teambit.react/react": {},
+            "teambit.envs/envs": {
+                "env": "teambit.react/react"
+            }
+        }
+    },
     "dex/place-order": {
         "scope": "",
         "version": "",

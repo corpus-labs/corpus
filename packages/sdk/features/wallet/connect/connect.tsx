@@ -26,6 +26,6 @@ export type ConnectProps = {
 export function Connect({ buttonText }: ConnectProps) {
   // const [ethereum, setEthereum] = useState<any>(null);
   const { publicKey, wallet, connecting, disconnect } = useWallet();
-  <div></div>;
+
   return wallet ? <WalletDisconnectButton /> : <WalletModalButton />;
 }

@@ -6,9 +6,10 @@ import { CalculatorIcon } from '@heroicons/react/outline'
 import { Button, ButtonSize } from '../atoms/Button'
 import { Label } from '../atoms/Label'
 import { Input } from '../atoms/Input'
-import { useAssociatedTokenAccount } from '../../hooks/useAssociatedTokenAccount'
+import { getAssociatedTokenAccount } from '../../utils/getAssociatedTokenAccount'
 import clsx from 'clsx'
 import { TOKEN_PROGRAM_ID } from '@solana/spl-token'
+
 export const PositionForm = () => {
   const wallet = useWallet()
   const { connection } = useConnection()
@@ -41,20 +42,22 @@ export const PositionForm = () => {
       return
     }
 
-    //
+    // Get USDC mint
     const ataMint = new PublicKey(
       'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v' // USDC
     )
 
     // Get associated token account
-    const ata = await useAssociatedTokenAccount(
+    const ata = await getAssociatedTokenAccount(
       ataMint,
       wallet.publicKey,
       wallet,
       connection
     )
 
+    // Determine payer
     const payer = side === 'buy' ? ata?.address : ata?.owner
+
     // Place order transaction
     const order = await market.makePlaceOrderTransaction(connection, {
       owner: wallet.publicKey,
@@ -135,6 +138,23 @@ export const PositionForm = () => {
         </div>
       </div>
       <fieldset>
+        {/* <select
+          className={clsx(
+            'form-select',
+            'p-3',
+            'text-sm',
+            'bg-zinc-800',
+            'rounded-lg',
+            'font-semibold',
+            'border-zinc-700'
+          )}
+          onChange={handleOrderTypeChange}
+          value={orderType}
+        >
+          <option value="limit">Limit</option>
+          <option value="postOnly">Post Only</option>
+          <option value="ioc">Immediete or Cancel</option>
+        </select> */}
         <div className="flex flex-col p-4 pb-2">
           <Label htmlFor="baseCurrencyInput" className="mb-2 text-zinc-400">
             Quantity (SOL)
@@ -210,23 +230,6 @@ export const PositionForm = () => {
               IOC
             </Label>
           </div>
-          {/* <select
-            className={clsx(
-              'form-select',
-              'p-3',
-              'text-sm',
-              'bg-zinc-800',
-              'rounded-lg',
-              'font-semibold',
-              'border-zinc-700'
-            )}
-            onChange={handleOrderTypeChange}
-            value={orderType}
-          >
-            <option value="limit">Limit</option>
-            <option value="postOnly">Post Only</option>
-            <option value="ioc">Immediete or Cancel</option>
-          </select> */}
         </div>
       </fieldset>
 
