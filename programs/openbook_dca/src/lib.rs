@@ -1,20 +1,3 @@
-// mod instructions;
-// use anchor_lang::prelude::*;
-
-// declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
-
-// #[program]
-// pub mod corpus {
-//     use super::*;
-
-//     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-//         Ok(())
-//     }
-// }
-
-// #[derive(Accounts)]
-// pub struct Initialize {}
-
 pub mod id;
 pub mod state;
 
@@ -33,24 +16,24 @@ pub mod openbook_dca {
      * initialize dca and open orders accounts
      */
     pub fn dca_create<'info>(
-        ctx: Context<'_, '_, '_, 'info, SwapCreate<'info>>,
+        ctx: Context<'_, '_, '_, 'info, DcaCreate<'info>>,
         swap_amount: u64,
     ) -> Result<()> {
-        swap_create::handler(ctx, swap_amount)
+        dca_create::handler(ctx, swap_amount)
     }
 
     /*
      * update dca account's swap amount
      */
-    pub fn dca_update<'info>(ctx: Context<SwapUpdate<'info>>, swap_amount: u64) -> Result<()> {
-        swap_update::handler(ctx, swap_amount)
+    pub fn dca_update<'info>(ctx: Context<DcaUpdate<'info>>, swap_amount: u64) -> Result<()> {
+        dca_update::handler(ctx, swap_amount)
     }
 
     /*
      * delete dca account
      */
-    pub fn dca_delete<'info>(ctx: Context<SwapDelete<'info>>) -> Result<()> {
-        swap_delete::handler(ctx)
+    pub fn dca_delete<'info>(ctx: Context<DcaDelete<'info>>) -> Result<()> {
+        dca_delete::handler(ctx)
     }
 
     /*
