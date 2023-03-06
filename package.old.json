@@ -1,0 +1,15 @@
+{
+  "name": "corpus",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf node_modules && lerna clean",
+    "start:app": "lerna run dev --scope @corpus-labs/web",
+    "build:app": "lerna run build --scope @corpus-labs/web"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
