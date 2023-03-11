@@ -11,46 +11,39 @@
 {
     "envs/tailwind-react": {
         "scope": "corpus.utils",
-        "version": "0.0.8",
+        "version": "0.0.9",
         "mainFile": "index.ts",
         "rootDir": "utils/envs/tailwind-react"
     },
     "layouts/header": {
         "scope": "corpus.design",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "design/layouts/header"
     },
     "layouts/hero": {
         "scope": "corpus.design",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "mainFile": "index.ts",
         "rootDir": "design/layouts/hero"
     },
     "themes/default": {
         "scope": "corpus.utils",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "utils/themes/default"
     },
     "wallet/connect": {
         "scope": "corpus.features",
-        "version": "0.0.6",
+        "version": "0.0.7",
         "mainFile": "index.ts",
         "rootDir": "features/wallet/connect"
     },
     "wallet/provider": {
-        "scope": "",
-        "version": "",
-        "defaultScope": "corpus.features",
+        "scope": "corpus.features",
+        "version": "0.0.1",
         "mainFile": "index.ts",
-        "rootDir": "features/wallet/provider",
-        "config": {
-            "teambit.react/react": {},
-            "teambit.envs/envs": {
-                "env": "teambit.react/react"
-            }
-        }
+        "rootDir": "features/wallet/provider"
     },
     "$schema-version": "15.5.0"
 }
