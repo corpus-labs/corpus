@@ -1,6 +1,0 @@
-{
-  "editor.tabSize": 2,
-  "editor.suggest.shareSuggestSelections": true,
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-}

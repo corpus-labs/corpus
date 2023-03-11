@@ -1,0 +1,9 @@
+{
+  "extends": "./node_modules/@teambit/react/typescript/tsconfig.json",
+  "include": ["./design/**/*", "./features/**/*"],
+  "compilerOptions": {
+    "noEmit": true,
+    "moduleResolution": "node"
+  },
+  "exclude": ["dist"]
+}

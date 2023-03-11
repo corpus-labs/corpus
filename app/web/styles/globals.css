@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Readex Pro';
+  src: url('/fonts/ReadexPro/ReadexPro-Light.ttf');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Readex Pro';
+  src: url('/fonts/ReadexPro/ReadexPro-Regular.ttf');
+  font-style: medium;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Readex Pro';
+  src: url('/fonts/ReadexPro/ReadexPro-Medium.ttf');
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Readex Pro';
+  src: url('/fonts/ReadexPro/ReadexPro-SemiBold.ttf');
+  font-style: medium;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Readex Pro';
+  src: url('/fonts/ReadexPro/ReadexPro-Bold.ttf');
+  font-style: medium;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
