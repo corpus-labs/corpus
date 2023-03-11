@@ -56,24 +56,21 @@
         "@teambit/eslint-config-bit-react": "~0.0.367",
         "@teambit/harmony": "0.4.6",
         "@teambit/webpack.modules.style-regexps": "0.0.138",
-        "@testing-library/react": "12.1.2",
         "@typescript-eslint/eslint-plugin": "5.35.1",
         "clsx": "1.2.1",
         "eslint-import-resolver-node": "0.3.6",
-        "eslint-plugin-import": "2.22.1",
-        "eslint-plugin-jest": "24.4.0",
-        "eslint-plugin-jsx-a11y": "6.4.1",
-        "eslint-plugin-mdx": "1.15.0",
-        "eslint-plugin-react": "7.25.1",
+        "eslint-plugin-import": "2.26.0",
+        "eslint-plugin-jest": "27.1.2",
+        "eslint-plugin-jsx-a11y": "6.6.1",
+        "eslint-plugin-mdx": "2.0.5",
+        "eslint-plugin-react": "7.31.10",
         "ionicons": "6.0.3",
-        "react": "17",
-        "react-dom": "17",
         "tailwindcss": "3.1.8"
       },
       "peerDependencies": {
-        "@testing-library/react": "12.1.2",
-        "react": "17",
-        "react-dom": "17"
+        "@testing-library/react": "^13.3.0",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
       }
     },
     "linkCoreAspects": true

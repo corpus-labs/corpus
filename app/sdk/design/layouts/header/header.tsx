@@ -1,5 +1,5 @@
 import React from 'react';
-import { Connect } from '@corpus/features.wallet.connect';
+import { WalletConnect } from '@corpus/features.wallet.connect';
 import clsx from 'clsx';
 import * as styles from './styles';
 
@@ -55,7 +55,7 @@ export function Header({
       </nav>
       { /* Wallet Connect */ }
       <div className="ml-auto pl-12">
-        <Connect />
+        <WalletConnect />
       </div>
     </header>
   );

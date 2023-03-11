@@ -1,13 +1,19 @@
 ---
-description: A Connect component.
+name: WalletConnect
+description: A WalletConnect component.
 ---
 
-import { Connect } from './connect';
+import { WalletConnect } from './connect';
 
-A wallet connect button that integrates with the `@solana/wallet-adapter-react` package on web and `@solana-mobile/mobile-wallet-adapter-protocol-web3js` on mobile.
+A wallet connect button that integrates with the `@solana/wallet-adapter-react` package.
 
 ### Component usage
 
 ```js
-<Connect />
+import { WalletProvider } from '@corpus/features.wallet.provider';
+import { WalletConnect } from '@corpus/features.wallet.connect';
+
+<WalletProvider>
+  <WalletConnect />
+</WalletProvider>
 ```

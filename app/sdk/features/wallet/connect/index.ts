@@ -1,2 +1,2 @@
-export { Connect } from './connect';
+export { WalletConnect } from './connect';
 export type { ConnectProps } from './connect';

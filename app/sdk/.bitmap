@@ -8,70 +8,12 @@
  * See the docs (https://bit.dev/docs/components/removing-components) for more information, or use "bit remove --help".
  */
 
- {
-    "contexts/wallet": {
-        "scope": "",
-        "version": "",
-        "defaultScope": "corpus.utils",
-        "mainFile": "index.ts",
-        "rootDir": "utils/contexts/wallet",
-        "config": {
-            "teambit.react/react": {},
-            "teambit.envs/envs": {
-                "env": "teambit.react/react"
-            }
-        }
-    },
-    "dex/place-order": {
-        "scope": "",
-        "version": "",
-        "defaultScope": "corpus.features",
-        "mainFile": "index.ts",
-        "rootDir": "features/dex/place-order",
-        "config": {
-            "corpus.utils/envs/tailwind-react": {},
-            "teambit.envs/envs": {
-                "env": "corpus.utils/envs/tailwind-react"
-            }
-        }
-    },
-    "elements/button": {
-        "scope": "corpus.design",
-        "version": "0.0.8",
-        "mainFile": "index.ts",
-        "rootDir": "design/elements/button"
-    },
-    "elements/tabs": {
-        "scope": "",
-        "version": "",
-        "defaultScope": "corpus.design",
-        "mainFile": "index.ts",
-        "rootDir": "design/elements/tabs",
-        "config": {
-            "corpus.utils/envs/tailwind-react": {},
-            "teambit.envs/envs": {
-                "env": "corpus.utils/envs/tailwind-react"
-            }
-        }
-    },
+{
     "envs/tailwind-react": {
         "scope": "corpus.utils",
         "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "utils/envs/tailwind-react"
-    },
-    "inputs/textfield": {
-        "scope": "",
-        "version": "",
-        "defaultScope": "corpus.design",
-        "mainFile": "index.ts",
-        "rootDir": "design/inputs/textfield",
-        "config": {
-            "corpus.utils/envs/tailwind-react": {},
-            "teambit.envs/envs": {
-                "env": "corpus.utils/envs/tailwind-react"
-            }
-        }
     },
     "layouts/header": {
         "scope": "corpus.design",
@@ -97,5 +39,18 @@
         "mainFile": "index.ts",
         "rootDir": "features/wallet/connect"
     },
-    "$schema-version": "15.0.0"
+    "wallet/provider": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "corpus.features",
+        "mainFile": "index.ts",
+        "rootDir": "features/wallet/provider",
+        "config": {
+            "teambit.react/react": {},
+            "teambit.envs/envs": {
+                "env": "teambit.react/react"
+            }
+        }
+    },
+    "$schema-version": "15.5.0"
 }

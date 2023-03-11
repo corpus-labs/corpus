@@ -17,7 +17,7 @@ export type ConnectProps = {
   buttonText?: string;
 };
 
-export function Connect({ buttonText }: ConnectProps) {
+export function WalletConnect({ buttonText }: ConnectProps) {
   // const [ethereum, setEthereum] = useState<any>(null);
   const { wallet } = useWallet();
 
