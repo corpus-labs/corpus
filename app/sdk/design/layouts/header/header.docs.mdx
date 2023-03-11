@@ -1,18 +1,25 @@
 ---
 description: A Header component.
 ---
+import { WalletProvider } from '@corpus/features.wallet.provider';
+import { Header } from '@corpus/design.layouts.header';
 
-import { Header } from './header';
-
-A component that does something special and renders text in a div.
+Cross-platform header component for use on web, iOS, and Android.
 
 ### Component usage
 ```js
-<Header>Hello world!</Header>
+import { WalletProvider } from '@corpus/features.wallet.provider';
+import { Header } from '@corpus/design.layouts.header';
+
+<WalletProvider>
+  <Header />
+</WalletProvider>
 ```
 
 ### Render hello world!
 
 ```js live
-<Header>Hello world!</Header>
+<WalletProvider>
+  <Header />
+</WalletProvider>
 ```

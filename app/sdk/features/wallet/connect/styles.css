@@ -1,5 +1,5 @@
 .wallet-adapter-button {
-  @apply flex items-center bg-white hover:bg-gray-100 rounded-lg text-zinc-900 text-sm font-medium px-4 py-2;
+  @apply flex items-center rounded-lg text-zinc-900 text-sm font-medium px-4 py-2 whitespace-nowrap;
 }
 
 /* .wallet-adapter-button:not([disabled]):focus-visible {

@@ -10,7 +10,7 @@
     /**
      * the name of the component workspace. used for development purposes.
      **/
-    "name": "corpus-bit",
+    "name": "corpus-sdk",
     /**
      * set the icon to be shown on the Bit server.
      **/
@@ -54,15 +54,11 @@
         "@solana/wallet-adapter-wallets": "^0.19.9",
         "@solana/web3.js": "1.66.0",
         "@teambit/eslint-config-bit-react": "~0.0.367",
-        "@teambit/harmony": "0.3.3",
+        "@teambit/harmony": "0.4.6",
         "@teambit/webpack.modules.style-regexps": "0.0.138",
+        "@testing-library/react": "12.1.2",
         "@typescript-eslint/eslint-plugin": "5.35.1",
-        "@types/jest": "^29.1.2",
-        "@types/node": "18.11.0",
-        "@types/react": "^18.0.28",
-        "@types/react-dom": "^18.0.11",
         "clsx": "1.2.1",
-        "core-js": "^3.25.5",
         "eslint-import-resolver-node": "0.3.6",
         "eslint-plugin-import": "2.22.1",
         "eslint-plugin-jest": "24.4.0",
@@ -70,12 +66,14 @@
         "eslint-plugin-mdx": "1.15.0",
         "eslint-plugin-react": "7.25.1",
         "ionicons": "6.0.3",
+        "react": "17",
+        "react-dom": "17",
         "tailwindcss": "3.1.8"
       },
       "peerDependencies": {
-        "@testing-library/react": "^12.1.5",
-        "react": "17.0.2",
-        "react-dom": "17.0.2"
+        "@testing-library/react": "12.1.2",
+        "react": "17",
+        "react-dom": "17"
       }
     },
     "linkCoreAspects": true

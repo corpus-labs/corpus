@@ -4,17 +4,11 @@ import {
   WalletModalButton,
   WalletDisconnectButton,
 } from '@solana/wallet-adapter-react-ui';
-// This function detects most providers injected at window.ethereum
-// import detectEthereumProvider from '@metamask/detect-provider';
-import { MetaMaskInpageProvider } from '@metamask/providers';
+import clsx from 'clsx';
 
 import './styles.css';
 
-declare global {
-  interface Window {
-    ethereum?: MetaMaskInpageProvider;
-  }
-}
+const buttonStyles = clsx('bg-white', 'hover:bg-gray-100');
 
 export type ConnectProps = {
   /**
@@ -25,7 +19,7 @@ export type ConnectProps = {
 
 export function Connect({ buttonText }: ConnectProps) {
   // const [ethereum, setEthereum] = useState<any>(null);
-  const { publicKey, wallet, connecting, disconnect } = useWallet();
+  const { wallet } = useWallet();
 
-  return wallet ? <WalletDisconnectButton /> : <WalletModalButton />;
+  return wallet ? <WalletDisconnectButton className={buttonStyles} /> : <WalletModalButton className={buttonStyles} />;
 }

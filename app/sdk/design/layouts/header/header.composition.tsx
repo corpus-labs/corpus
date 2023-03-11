@@ -1,13 +1,11 @@
 import React from 'react';
-import { WalletProvider } from '@corpus/utils.contexts.wallet';
+import { WalletProvider } from '@corpus/features.wallet.provider';
 import { Header } from './header';
 
-export const BasicHeader = () => {
+export const DefaultHeader = () => {
   return (
     <WalletProvider>
-      <div className="bg-zinc-900 h-screen">
-        <Header />
-      </div>
+      <Header />
     </WalletProvider>
   );
 };
