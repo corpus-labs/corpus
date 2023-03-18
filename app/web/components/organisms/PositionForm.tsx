@@ -1,21 +1,28 @@
 import React, { ChangeEvent, FormEvent, useState, useEffect } from 'react'
 import { PublicKey, Transaction } from '@solana/web3.js'
-import { useWallet, useConnection } from '@solana/wallet-adapter-react'
+import {
+  useWallet,
+  useConnection,
+  AnchorWallet,
+} from '@solana/wallet-adapter-react'
+import { OrderParams } from '@openbook-dex/openbook/lib/market'
 import { useMarketContext } from '../../contexts/market'
+import { useAccountsContext } from '../../contexts/accounts'
 import { CalculatorIcon } from '@heroicons/react/outline'
 import { Button, ButtonSize } from '../atoms/Button'
 import { Label } from '../atoms/Label'
 import { Input } from '../atoms/Input'
-import { useAssociatedTokenAccount } from '../../hooks/useAssociatedTokenAccount'
+import { getAssociatedTokenAccount } from '../../utils/getAssociatedTokenAccount'
 import clsx from 'clsx'
 
 export const PositionForm = () => {
   const wallet = useWallet()
   const { connection } = useConnection()
-  const { market } = useMarketContext()
+  const { market, placeOrder, currentPrice } = useMarketContext()
+  // const { getAccount } = useAccountsContext()
   const [side, setSide] = useState<string>('buy')
-  const [baseCurrency, setBaseCurrency] = useState<string>(0)
-  const [quoteCurrency, setQuoteCurrency] = useState<string>(0)
+  const [baseCurrency, setBaseCurrency] = useState<string | number>(0)
+  const [quoteCurrency, setQuoteCurrency] = useState<string | number>(0)
   const [orderType, setOrderType] = useState<string>('limit')
 
   const handleBaseCurrencyChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -26,42 +33,36 @@ export const PositionForm = () => {
     setQuoteCurrency(e.target.value)
   }
 
-  const handleOrderTypeChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    setOrderType(e.target.value)
-  }
+  // const handleOrderTypeChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  //   setOrderType(e.target.value)
+  // }
 
-  const handleMarketOrder = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-  }
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleLimitOrder = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     if (!wallet.publicKey) {
       return
     }
 
-    //
-    const ataMint = new PublicKey(
-      'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v' // USDC
-    )
-
-    // Get associated token account
-    const ata = await useAssociatedTokenAccount(
-      ataMint,
+    // Get associated token account for quote token
+    const quoteToken = await getAssociatedTokenAccount(
+      market.quoteMintAddress,
       wallet.publicKey,
       wallet,
       connection
     )
 
+    // Determine payer
+    const payer = side === 'buy' ? quoteToken?.address : quoteToken?.owner
+
     // Place order transaction
     const order = await market.makePlaceOrderTransaction(connection, {
       owner: wallet.publicKey,
-      payer: ata?.owner as PublicKey,
-      side: side, // 'buy' or 'sell'
-      price: quoteCurrency,
-      size: baseCurrency,
-      orderType: 'limit', // 'limit', 'ioc', 'postOnly'
+      payer: payer!,
+      side: side as 'buy' | 'sell', // 'buy' or 'sell'
+      price: Number(quoteCurrency),
+      size: Number(baseCurrency),
+      orderType: orderType as 'limit' | 'ioc' | 'postOnly' | undefined, // 'limit', 'ioc', 'postOnly',
     })
 
     // Build transaction
@@ -89,7 +90,7 @@ export const PositionForm = () => {
   return (
     <form
       className="flex flex-col w-1/4 border-b border-zinc-800"
-      onSubmit={handleSubmit}
+      onSubmit={handleLimitOrder}
     >
       <div className="flex items-center px-4 h-16 border-b border-zinc-800">
         <Button
@@ -209,23 +210,6 @@ export const PositionForm = () => {
               IOC
             </Label>
           </div>
-          {/* <select
-            className={clsx(
-              'form-select',
-              'p-3',
-              'text-sm',
-              'bg-zinc-800',
-              'rounded-lg',
-              'font-semibold',
-              'border-zinc-700'
-            )}
-            onChange={handleOrderTypeChange}
-            value={orderType}
-          >
-            <option value="limit">Limit</option>
-            <option value="postOnly">Post Only</option>
-            <option value="ioc">Immediete or Cancel</option>
-          </select> */}
         </div>
       </fieldset>
 

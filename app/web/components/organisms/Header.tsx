@@ -1,11 +1,17 @@
 import Image from 'next/image'
-import { WalletButton } from '../molecules/WalletButton'
+import { WalletConnect } from '@corpus/features.wallet.connect'
+import {
+  WalletModalButton,
+  WalletDisconnectButton,
+} from '@solana/wallet-adapter-react-ui'
+import { useWallet } from '@solana/wallet-adapter-react'
 // import { MetaMaskConnect } from '../molecules/MetaMaskConnect'
 import clsx from 'clsx'
 
 export interface HeaderProps {}
 
 export const Header: React.VFC<HeaderProps> = (props) => {
+  const { wallet } = useWallet()
   return (
     <header
       className={clsx(
@@ -78,6 +84,8 @@ export const Header: React.VFC<HeaderProps> = (props) => {
         <div className={clsx('text-sm', 'text-gray-400')}>Wallet</div>
       </nav>
 
+      {wallet ? <WalletDisconnectButton /> : <WalletModalButton />}
+      {/* <WalletConnect /> */}
       {/* <button
         className={clsx(
           'ml-auto',
@@ -95,23 +103,6 @@ export const Header: React.VFC<HeaderProps> = (props) => {
       >
         Connect Wallet
       </button> */}
-      <WalletButton
-        className={clsx(
-          'flex',
-          'items-center',
-          'ml-auto',
-          'bg-white',
-          'hover:bg-gray-100',
-          'rounded-lg',
-          'text-zinc-900',
-          'text-sm',
-          'font-medium',
-          'mr-4',
-          'px-4',
-          'py-2',
-          'whitespace-nowrap'
-        )}
-      />
     </header>
   )
 }

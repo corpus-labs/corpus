@@ -12,7 +12,7 @@ export const OpenOrders: React.VFC = () => {
   const [openOrders, setOpenOrders] = useState<Order[] | null>(null)
 
   const getOpenOrders = async () => {
-    if (market) {
+    if (market && publicKey) {
       const orders = await market.loadOrdersForOwner(
         connection,
         publicKey,
@@ -35,54 +35,55 @@ export const OpenOrders: React.VFC = () => {
 
   return (
     <div className={clsx('flex flex-col w-full')}>
-      {openOrders?.map((order) => {
-        const handleCancel = async () => {
-          const { blockhash, lastValidBlockHeight } =
-            await connection.getLatestBlockhash()
+      {publicKey &&
+        openOrders?.map((order) => {
+          const handleCancel = async () => {
+            const { blockhash, lastValidBlockHeight } =
+              await connection.getLatestBlockhash()
 
-          const transaction = new Transaction({
-            blockhash,
-            lastValidBlockHeight,
-            feePayer: publicKey,
-          })
+            const transaction = new Transaction({
+              blockhash,
+              lastValidBlockHeight,
+              feePayer: publicKey,
+            })
 
-          const instruction = await market.makeCancelOrderInstruction(
-            connection,
-            publicKey,
-            order
-          )
+            const instruction = await market.makeCancelOrderInstruction(
+              connection,
+              publicKey,
+              order
+            )
 
-          transaction.add(instruction)
+            transaction.add(instruction)
 
-          await sendTransaction(transaction, connection)
-        }
-        return (
-          <div
-            className={clsx(
-              'flex space-x-8 w-full text-sm border-b border-zinc-800 py-4'
-            )}
-          >
-            <div>SOL/USDC</div>
+            await sendTransaction(transaction, connection)
+          }
+          return (
             <div
-              className={clsx('uppercase', {
-                'text-red-500': order.side === 'sell',
-                'text-emerald-500': order.side === 'buy',
-              })}
+              className={clsx(
+                'flex space-x-8 w-full text-sm border-b border-zinc-800 py-4'
+              )}
             >
-              {order.side}
+              <div>SOL/USDC</div>
+              <div
+                className={clsx('uppercase', {
+                  'text-red-500': order.side === 'sell',
+                  'text-emerald-500': order.side === 'buy',
+                })}
+              >
+                {order.side}
+              </div>
+              <div>{order.size}</div>
+              <div>{order.price}</div>
+              <button
+                type="button"
+                style={{ marginLeft: 'auto' }}
+                onClick={handleCancel}
+              >
+                Cancel
+              </button>
             </div>
-            <div>{order.size}</div>
-            <div>{order.price}</div>
-            <button
-              type="button"
-              style={{ marginLeft: 'auto' }}
-              onClick={handleCancel}
-            >
-              Cancel
-            </button>
-          </div>
-        )
-      })}
+          )
+        })}
     </div>
   )
 }
