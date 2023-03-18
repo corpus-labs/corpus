@@ -1,7 +1,7 @@
 /**
  * this is the main configuration file of your bit workspace.
  * for full documentation, please see: https://bit.dev/docs/workspace/workspace-configuration
- **/ {
+ **/{
   "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
   /**
    * main configuration of the Bit workspace.
@@ -30,7 +30,9 @@
     "defaultScope": "corpus.elements"
   },
   "teambit.component/issues": {
-    "ignoreIssues": ["MissingPackagesDependenciesOnFs"]
+    "ignoreIssues": [
+      "MissingPackagesDependenciesOnFs"
+    ]
   },
   /**
    * main configuration for component dependency resolution.
@@ -44,6 +46,7 @@
       "dependencies": {
         "@babel/runtime": "7.19.4",
         "@bit-foundations/env-configs.typescript.jsx-transform": "0.0.1",
+        "@bit-foundations/react.react-version-envs.react-18-env": "^1.0.1",
         "@bit-foundations/styling.tailwind.webpack-transformer": "0.0.6",
         "@floating-ui/react": "^0.20.1",
         "@solana/wallet-adapter-base": "^0.9.20",
@@ -68,6 +71,8 @@
         "eslint-plugin-mdx": "2.0.5",
         "eslint-plugin-react": "7.31.10",
         "ionicons": "6.0.3",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
         "tailwindcss": "3.1.8"
       },
       "peerDependencies": {
