@@ -1,27 +1,40 @@
 import {
   FC,
+  ReactNode,
   createContext,
   useCallback,
   useContext,
   useEffect,
   useState,
 } from 'react'
-import { Market } from '@openbook-dex/openbook'
-import { useConnection } from '@solana/wallet-adapter-react'
+import { Market, Orderbook } from '@openbook-dex/openbook'
+import { useConnection, useWallet } from '@solana/wallet-adapter-react'
+import { useAccountsContext } from './accounts'
 import { useInterval } from '../hooks/useInterval'
+import { getAssociatedTokenAccount } from '../utils/getAssociatedTokenAccount'
 import ChartApi from '../utils/chartDataConnector'
-import { PublicKey } from '@solana/web3.js'
+import { PublicKey, Transaction } from '@solana/web3.js'
+import getConfig from 'next/config'
 
-const MarketContext = createContext({
-  ohlcv: {},
-  currentPrice: 0,
-  market: null as any,
-})
+export interface MarketContextState {
+  ohlcv: {}
+  currentPrice: number
+  market: Market
+  refAddress?: string
+  placeOrder(side: string, size: number, price: number, orderType: string): void
+}
 
-export const MarketProvider: FC = ({ children }) => {
+const MarketContext = createContext<MarketContextState | null>(null)
+
+export const MarketProvider: FC<{ children?: ReactNode }> = ({ children }) => {
+  const { publicRuntimeConfig } = getConfig()
   const { connection } = useConnection()
+  const wallet = useWallet()
+  // const { getAccount } = useAccountsContext()
   const [ohlcv, setOhlcv] = useState<any>(null)
   const [market, setMarket] = useState<any>(null)
+
+  console.log(market)
 
   // Hard-coding SOL/USDC values for now,
   // make dynamic later
@@ -33,6 +46,53 @@ export const MarketProvider: FC = ({ children }) => {
       new PublicKey('srmqPvymJeFKQ4zGQed1GFppgkRHL9kaELCbyksJtPX')
     )
     setMarket(market)
+  }
+
+  const placeOrder = async (
+    side: string,
+    price: number,
+    size: number,
+    orderType: string
+  ) => {
+    if (!wallet.publicKey) {
+      return
+    }
+
+    const [quoteToken] = await market.findQuoteTokenAccountsForOwner(
+      connection,
+      wallet.publicKey
+    )
+
+    // Create order
+    const order = await market.makePlaceOrderTransaction(connection, {
+      owner: wallet.publicKey,
+      payer: side === 'buy' ? quoteToken?.pubkey : quoteToken?.account.owner,
+      side,
+      price,
+      size,
+      orderType, // 'limit', 'ioc', 'postOnly',
+    })
+
+    // Build transaction
+    const { blockhash, lastValidBlockHeight } =
+      await connection.getLatestBlockhash()
+
+    const transaction = new Transaction({
+      blockhash,
+      lastValidBlockHeight,
+      feePayer: wallet.publicKey,
+    })
+
+    transaction.add(order.transaction)
+
+    // Send transaction
+    try {
+      await wallet.sendTransaction(transaction, connection, {
+        signers: order.signers,
+      })
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   const fetchOhlcv = useCallback(async () => {
@@ -67,6 +127,8 @@ export const MarketProvider: FC = ({ children }) => {
         ohlcv,
         currentPrice: ohlcv?.c[ohlcv.c.length - 1],
         market,
+        placeOrder,
+        refAddress: publicRuntimeConfig.USDC_REF_ADDRESS ?? undefined,
       }}
     >
       {children}
@@ -75,5 +137,6 @@ export const MarketProvider: FC = ({ children }) => {
 }
 
 export const useMarketContext = () => {
-  return useContext(MarketContext)
+  const context = useContext(MarketContext)
+  return context as MarketContextState
 }

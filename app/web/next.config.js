@@ -2,10 +2,12 @@ const withTM = require('next-transpile-modules')([
   '@solana/wallet-adapter-base',
   '@solana/wallet-adapter-react',
   '@solana/wallet-adapter-react-ui',
+  '@corpus/features.wallet.connect',
 ])
 
 /** @type {import('next').NextConfig} */
 module.exports = withTM({
+  output: 'export',
   reactStrictMode: true,
   webpack: (config) => {
     config.module.rules

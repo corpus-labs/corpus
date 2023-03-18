@@ -20,7 +20,7 @@ importers:
       '@teambit/harmony': 0.4.6
       '@teambit/webpack.modules.style-regexps': 0.0.138
       '@testing-library/react': 12.1.2
-      '@types/jest': ^26.0.0
+      '@types/jest': 26.0.20
       '@types/node': 12.20.4
       '@types/react': ^17.0.8
       '@types/react-dom': ^17.0.5
@@ -35,7 +35,7 @@ importers:
       eslint-plugin-mdx: 2.0.5
       eslint-plugin-react: 7.31.10
       ionicons: 6.0.3
-      react: ^16.8.0 || ^17.0.0
+      react: '17'
       react-dom: ^16.8.0 || ^17.0.0
       tailwindcss: 3.1.8
     dependencies:
@@ -44,8 +44,8 @@ importers:
       '@bit-foundations/styling.tailwind.webpack-transformer': 0.0.6
       '@floating-ui/react': registry.npmjs.org/@floating-ui/react/0.20.1_sfoxds7t5ydpegc3knd667wn6m
       '@solana/wallet-adapter-base': registry.npmjs.org/@solana/wallet-adapter-base/0.9.22_@solana+web3.js@1.66.0
-      '@solana/wallet-adapter-react': registry.npmjs.org/@solana/wallet-adapter-react/0.15.30_uncd5yver32kbkqv2fghhyfqpy
-      '@solana/wallet-adapter-react-ui': registry.npmjs.org/@solana/wallet-adapter-react-ui/0.9.29_265ittuem5ma3epxt4d3xrhlxi
+      '@solana/wallet-adapter-react': registry.npmjs.org/@solana/wallet-adapter-react/0.15.31_uncd5yver32kbkqv2fghhyfqpy
+      '@solana/wallet-adapter-react-ui': registry.npmjs.org/@solana/wallet-adapter-react-ui/0.9.30_265ittuem5ma3epxt4d3xrhlxi
       '@solana/wallet-adapter-wallets': registry.npmjs.org/@solana/wallet-adapter-wallets/0.19.15_rjokdcjsl6kbvtp7e2ubv2du7i
       '@solana/web3.js': registry.npmjs.org/@solana/web3.js/1.66.0
       '@teambit/eslint-config-bit-react': registry.npmjs.org/@teambit/eslint-config-bit-react/0.0.367_5ajjjc7mzo66sdzpjkee7vxo6y
@@ -54,7 +54,7 @@ importers:
       '@testing-library/react': registry.npmjs.org/@testing-library/react/12.1.2_sfoxds7t5ydpegc3knd667wn6m
       '@typescript-eslint/eslint-plugin': registry.npmjs.org/@typescript-eslint/eslint-plugin/5.35.1
       clsx: registry.npmjs.org/clsx/1.2.1
-      core-js: registry.npmjs.org/core-js/3.29.0
+      core-js: registry.npmjs.org/core-js/3.29.1
       eslint-import-resolver-node: registry.npmjs.org/eslint-import-resolver-node/0.3.6
       eslint-plugin-import: registry.npmjs.org/eslint-plugin-import/2.26.0
       eslint-plugin-jest: registry.npmjs.org/eslint-plugin-jest/27.1.2_xn3tftklcczrgzfoellg7qomqu
@@ -145,7 +145,7 @@ packages:
     version: 7.21.0
     engines: {node: '>=6.9.0'}
     dependencies:
-      core-js-pure: registry.npmjs.org/core-js-pure/3.29.0
+      core-js-pure: registry.npmjs.org/core-js-pure/3.29.1
       regenerator-runtime: registry.npmjs.org/regenerator-runtime/0.13.11
     dev: false
 
@@ -153,6 +153,15 @@ packages:
     resolution: {integrity: sha512-NDYdls71fTXoU8TZHfbBWg7DiZfNzClcKui/+kyi6ppD2L1qnWW3VV6CjtaBXSUGGhiTWJ6ereOIkUvenif66Q==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@babel/runtime/-/runtime-7.20.0.tgz}
     name: '@babel/runtime'
     version: 7.20.0
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: registry.npmjs.org/regenerator-runtime/0.13.11
+    dev: false
+
+  registry.npmjs.org/@babel/runtime/7.21.0:
+    resolution: {integrity: sha512-xwII0//EObnq89Ji5AKYQaRYiW/nZ3llSv29d49IuxPhKbtJoLP+9QUUZ4nVragQVtaVGeZrpB+ZtG/Pdy/POw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@babel/runtime/-/runtime-7.21.0.tgz}
+    name: '@babel/runtime'
+    version: 7.21.0
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: registry.npmjs.org/regenerator-runtime/0.13.11
@@ -195,6 +204,30 @@ packages:
       - utf-8-validate
     dev: false
 
+  registry.npmjs.org/@chainsafe/as-sha256/0.3.1:
+    resolution: {integrity: sha512-hldFFYuf49ed7DAakWVXSJODuq3pzJEguD8tQ7h+sGkM18vja+OFoJI9krnGmgzyuZC2ETX0NOIcCTy31v2Mtg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@chainsafe/as-sha256/-/as-sha256-0.3.1.tgz}
+    name: '@chainsafe/as-sha256'
+    version: 0.3.1
+    dev: false
+
+  registry.npmjs.org/@chainsafe/persistent-merkle-tree/0.4.2:
+    resolution: {integrity: sha512-lLO3ihKPngXLTus/L7WHKaw9PnNJWizlOF1H9NNzHP6Xvh82vzg9F2bzkXhYIFshMZ2gTCEz8tq6STe7r5NDfQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@chainsafe/persistent-merkle-tree/-/persistent-merkle-tree-0.4.2.tgz}
+    name: '@chainsafe/persistent-merkle-tree'
+    version: 0.4.2
+    dependencies:
+      '@chainsafe/as-sha256': registry.npmjs.org/@chainsafe/as-sha256/0.3.1
+    dev: false
+
+  registry.npmjs.org/@chainsafe/ssz/0.9.4:
+    resolution: {integrity: sha512-77Qtg2N1ayqs4Bg/wvnWfg5Bta7iy7IRh8XqXh7oNMeP2HBbBwx8m6yTpA8p0EHItWPEBkgZd5S5/LSlp3GXuQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@chainsafe/ssz/-/ssz-0.9.4.tgz}
+    name: '@chainsafe/ssz'
+    version: 0.9.4
+    dependencies:
+      '@chainsafe/as-sha256': registry.npmjs.org/@chainsafe/as-sha256/0.3.1
+      '@chainsafe/persistent-merkle-tree': registry.npmjs.org/@chainsafe/persistent-merkle-tree/0.4.2
+      case: registry.npmjs.org/case/1.6.3
+    dev: false
+
   registry.npmjs.org/@cspotcode/source-map-support/0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@cspotcode/source-map-support/-/source-map-support-0.8.1.tgz}
     name: '@cspotcode/source-map-support'
@@ -204,18 +237,51 @@ packages:
       '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping/0.3.9
     dev: false
 
-  registry.npmjs.org/@floating-ui/core/1.2.2:
-    resolution: {integrity: sha512-FaO9KVLFnxknZaGWGmNtjD2CVFuc0u4yeGEofoyXO2wgRA7fLtkngT6UB0vtWQWuhH3iMTZZ/Y89CMeyGfn8pA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@floating-ui/core/-/core-1.2.2.tgz}
-    name: '@floating-ui/core'
-    version: 1.2.2
+  registry.npmjs.org/@eslint-community/eslint-utils/4.3.0:
+    resolution: {integrity: sha512-v3oplH6FYCULtFuCeqyuTd9D2WKO937Dxdq+GmHOLL72TTRriLxz2VLlNfkZRsvj6PKnOPAtuT6dwrs/pA5DvA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@eslint-community/eslint-utils/-/eslint-utils-4.3.0.tgz}
+    name: '@eslint-community/eslint-utils'
+    version: 4.3.0
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: '*'
+    peerDependenciesMeta:
+      eslint:
+        optional: true
+    dependencies:
+      eslint-visitor-keys: registry.npmjs.org/eslint-visitor-keys/3.3.0
     dev: false
 
-  registry.npmjs.org/@floating-ui/dom/1.2.3:
-    resolution: {integrity: sha512-lK9cZUrHSJLMVAdCvDqs6Ug8gr0wmqksYiaoj/bxj2gweRQkSuhg2/V6Jswz2KiQ0RAULbqw1oQDJIMpQ5GfGA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@floating-ui/dom/-/dom-1.2.3.tgz}
-    name: '@floating-ui/dom'
-    version: 1.2.3
+  registry.npmjs.org/@ethereumjs/rlp/4.0.1:
+    resolution: {integrity: sha512-tqsQiBQDQdmPWE1xkkBq4rlSW5QZpLOUJ5RJh2/9fug+q9tnUhuZoVLk7s0scUIKTOzEtR72DFBXI4WiZcMpvw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@ethereumjs/rlp/-/rlp-4.0.1.tgz}
+    name: '@ethereumjs/rlp'
+    version: 4.0.1
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: false
+
+  registry.npmjs.org/@ethereumjs/util/8.0.5:
+    resolution: {integrity: sha512-259rXKK3b3D8HRVdRmlOEi6QFvwxdt304hhrEAmpZhsj7ufXEOTIc9JRZPMnXatKjECokdLNBcDOFBeBSzAIaw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@ethereumjs/util/-/util-8.0.5.tgz}
+    name: '@ethereumjs/util'
+    version: 8.0.5
+    engines: {node: '>=14'}
     dependencies:
-      '@floating-ui/core': registry.npmjs.org/@floating-ui/core/1.2.2
+      '@chainsafe/ssz': registry.npmjs.org/@chainsafe/ssz/0.9.4
+      '@ethereumjs/rlp': registry.npmjs.org/@ethereumjs/rlp/4.0.1
+      ethereum-cryptography: registry.npmjs.org/ethereum-cryptography/1.2.0
+    dev: false
+
+  registry.npmjs.org/@floating-ui/core/1.2.4:
+    resolution: {integrity: sha512-SQOeVbMwb1di+mVWWJLpsUTToKfqVNioXys011beCAhyOIFtS+GQoW4EQSneuxzmQKddExDwQ+X0hLl4lJJaSQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@floating-ui/core/-/core-1.2.4.tgz}
+    name: '@floating-ui/core'
+    version: 1.2.4
+    dev: false
+
+  registry.npmjs.org/@floating-ui/dom/1.2.4:
+    resolution: {integrity: sha512-4+k+BLhtWj+peCU60gp0+rHeR8+Ohqx6kjJf/lHMnJ8JD5Qj6jytcq1+SZzRwD7rvHKRhR7TDiWWddrNrfwQLg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@floating-ui/dom/-/dom-1.2.4.tgz}
+    name: '@floating-ui/dom'
+    version: 1.2.4
+    dependencies:
+      '@floating-ui/core': registry.npmjs.org/@floating-ui/core/1.2.4
     dev: false
 
   registry.npmjs.org/@floating-ui/react-dom/1.3.0_sfoxds7t5ydpegc3knd667wn6m:
@@ -232,7 +298,7 @@ packages:
       react-dom:
         optional: true
     dependencies:
-      '@floating-ui/dom': registry.npmjs.org/@floating-ui/dom/1.2.3
+      '@floating-ui/dom': registry.npmjs.org/@floating-ui/dom/1.2.4
       react: registry.npmjs.org/react/17.0.2
       react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
     dev: false
@@ -317,8 +383,8 @@ packages:
     dependencies:
       '@solana/web3.js': registry.npmjs.org/@solana/web3.js/1.66.0
       '@walletconnect/qrcode-modal': registry.npmjs.org/@walletconnect/qrcode-modal/1.8.0
-      '@walletconnect/sign-client': registry.npmjs.org/@walletconnect/sign-client/2.4.9_@types+node@12.20.4
-      '@walletconnect/utils': registry.npmjs.org/@walletconnect/utils/2.4.9_@types+node@12.20.4
+      '@walletconnect/sign-client': registry.npmjs.org/@walletconnect/sign-client/2.5.1_@types+node@12.20.4
+      '@walletconnect/utils': registry.npmjs.org/@walletconnect/utils/2.5.1_@types+node@12.20.4
       bs58: registry.npmjs.org/bs58/5.0.0
     transitivePeerDependencies:
       - '@react-native-async-storage/async-storage'
@@ -510,6 +576,12 @@ packages:
     version: 1.2.0
     dev: false
 
+  registry.npmjs.org/@noble/hashes/1.3.0:
+    resolution: {integrity: sha512-ilHEACi9DwqJB0pw7kv+Apvh50jiiSyR/cQ3y4W7lOR5mhvn/50FLUfsnfJz0BDZtl/RR16kXvptiv6q1msYZg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@noble/hashes/-/hashes-1.3.0.tgz}
+    name: '@noble/hashes'
+    version: 1.3.0
+    dev: false
+
   registry.npmjs.org/@noble/secp256k1/1.7.1:
     resolution: {integrity: sha512-hOUk6AyBFmqVrv7k5WAw/LpszxVbj9gGN4JRkIX52fdFAj1UA61KXmZDvqVEm+pOyec3+fIeZB02LYa/pWOArw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@noble/secp256k1/-/secp256k1-1.7.1.tgz}
     name: '@noble/secp256k1'
@@ -624,10 +696,10 @@ packages:
       eventemitter3: registry.npmjs.org/eventemitter3/4.0.7
     dev: false
 
-  registry.npmjs.org/@react-native-async-storage/async-storage/1.17.11:
-    resolution: {integrity: sha512-bzs45n5HNcDq6mxXnSsOHysZWn1SbbebNxldBXCQs8dSvF8Aor9KCdpm+TpnnGweK3R6diqsT8lFhX77VX0NFw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@react-native-async-storage/async-storage/-/async-storage-1.17.11.tgz}
+  registry.npmjs.org/@react-native-async-storage/async-storage/1.17.12:
+    resolution: {integrity: sha512-BXg4OxFdjPTRt+8MvN6jz4muq0/2zII3s7HeT/11e4Zeh3WCgk/BleLzUcDfVqF3OzFHUqEkSrb76d6Ndjd/Nw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@react-native-async-storage/async-storage/-/async-storage-1.17.12.tgz}
     name: '@react-native-async-storage/async-storage'
-    version: 1.17.11
+    version: 1.17.12
     peerDependencies:
       react-native: '*'
     peerDependenciesMeta:
@@ -635,6 +707,31 @@ packages:
         optional: true
     dependencies:
       merge-options: registry.npmjs.org/merge-options/3.0.4
+    dev: false
+
+  registry.npmjs.org/@scure/base/1.1.1:
+    resolution: {integrity: sha512-ZxOhsSyxYwLJj3pLZCefNitxsj093tb2vq90mp2txoYeBqbcjDjqFhyM8eUjq/uFm6zJ+mUuqxlS2FkuSY1MTA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@scure/base/-/base-1.1.1.tgz}
+    name: '@scure/base'
+    version: 1.1.1
+    dev: false
+
+  registry.npmjs.org/@scure/bip32/1.1.5:
+    resolution: {integrity: sha512-XyNh1rB0SkEqd3tXcXMi+Xe1fvg+kUIcoRIEujP1Jgv7DqW2r9lg3Ah0NkFaCs9sTkQAQA8kw7xiRXzENi9Rtw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@scure/bip32/-/bip32-1.1.5.tgz}
+    name: '@scure/bip32'
+    version: 1.1.5
+    dependencies:
+      '@noble/hashes': registry.npmjs.org/@noble/hashes/1.2.0
+      '@noble/secp256k1': registry.npmjs.org/@noble/secp256k1/1.7.1
+      '@scure/base': registry.npmjs.org/@scure/base/1.1.1
+    dev: false
+
+  registry.npmjs.org/@scure/bip39/1.1.1:
+    resolution: {integrity: sha512-t+wDck2rVkh65Hmv280fYdVdY25J9YeEUIgn2LG1WM6gxFkGzcksoDiUkWVpVp3Oex9xGC68JU2dSbUfwZ2jPg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@scure/bip39/-/bip39-1.1.1.tgz}
+    name: '@scure/bip39'
+    version: 1.1.1
+    dependencies:
+      '@noble/hashes': registry.npmjs.org/@noble/hashes/1.2.0
+      '@scure/base': registry.npmjs.org/@scure/base/1.1.1
     dev: false
 
   registry.npmjs.org/@socket.io/component-emitter/3.1.0:
@@ -684,7 +781,7 @@ packages:
       '@solana/web3.js':
         optional: true
     dependencies:
-      '@react-native-async-storage/async-storage': registry.npmjs.org/@react-native-async-storage/async-storage/1.17.11
+      '@react-native-async-storage/async-storage': registry.npmjs.org/@react-native-async-storage/async-storage/1.17.12
       '@solana-mobile/mobile-wallet-adapter-protocol-web3js': registry.npmjs.org/@solana-mobile/mobile-wallet-adapter-protocol-web3js/0.9.9_@solana+web3.js@1.66.0
       '@solana/wallet-adapter-base': registry.npmjs.org/@solana/wallet-adapter-base/0.9.22_@solana+web3.js@1.66.0
       '@solana/web3.js': registry.npmjs.org/@solana/web3.js/1.66.0
@@ -1196,11 +1293,11 @@ packages:
       '@solana/web3.js': registry.npmjs.org/@solana/web3.js/1.66.0
     dev: false
 
-  registry.npmjs.org/@solana/wallet-adapter-react-ui/0.9.29_265ittuem5ma3epxt4d3xrhlxi:
-    resolution: {integrity: sha512-y6SV4LH6iB+gmfGxNB19B4jo2++bcj76FmZaELtLDcKv4bA+Be1bX+7gIkqadcvUXeyiKdAybXIQqyOE5ntBNg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@solana/wallet-adapter-react-ui/-/wallet-adapter-react-ui-0.9.29.tgz}
-    id: registry.npmjs.org/@solana/wallet-adapter-react-ui/0.9.29
+  registry.npmjs.org/@solana/wallet-adapter-react-ui/0.9.30_265ittuem5ma3epxt4d3xrhlxi:
+    resolution: {integrity: sha512-OqitbNHn5xeT9SRdPHSutoqCR4i7zvbp874UJlkaSWfCRUuS/KPT9rSRj/nlWjDqCQaQhx4dWxgcTcipwJ9Cag==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@solana/wallet-adapter-react-ui/-/wallet-adapter-react-ui-0.9.30.tgz}
+    id: registry.npmjs.org/@solana/wallet-adapter-react-ui/0.9.30
     name: '@solana/wallet-adapter-react-ui'
-    version: 0.9.29
+    version: 0.9.30
     engines: {node: '>=16'}
     peerDependencies:
       '@solana/web3.js': '*'
@@ -1215,7 +1312,7 @@ packages:
         optional: true
     dependencies:
       '@solana/wallet-adapter-base': registry.npmjs.org/@solana/wallet-adapter-base/0.9.22_@solana+web3.js@1.66.0
-      '@solana/wallet-adapter-react': registry.npmjs.org/@solana/wallet-adapter-react/0.15.30_uncd5yver32kbkqv2fghhyfqpy
+      '@solana/wallet-adapter-react': registry.npmjs.org/@solana/wallet-adapter-react/0.15.31_uncd5yver32kbkqv2fghhyfqpy
       '@solana/web3.js': registry.npmjs.org/@solana/web3.js/1.66.0
       react: registry.npmjs.org/react/17.0.2
       react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
@@ -1224,11 +1321,11 @@ packages:
       - react-native
     dev: false
 
-  registry.npmjs.org/@solana/wallet-adapter-react/0.15.30_uncd5yver32kbkqv2fghhyfqpy:
-    resolution: {integrity: sha512-62fg46AIia0udRlQLjMxHPa/cQUE2Neur/s74r96gakyPPEEFbbAcVPHMkEX7r0DPjl5lWj834beIbUXBwHjlw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@solana/wallet-adapter-react/-/wallet-adapter-react-0.15.30.tgz}
-    id: registry.npmjs.org/@solana/wallet-adapter-react/0.15.30
+  registry.npmjs.org/@solana/wallet-adapter-react/0.15.31_uncd5yver32kbkqv2fghhyfqpy:
+    resolution: {integrity: sha512-zsuRRAvoaPig0WuPwcWYf+N5OGJva5i2aRRkbXEV8BM/HrOZ7LMc0G7W7JcLx4Wu4XvMf5twh/ieZqri0Sh7DA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@solana/wallet-adapter-react/-/wallet-adapter-react-0.15.31.tgz}
+    id: registry.npmjs.org/@solana/wallet-adapter-react/0.15.31
     name: '@solana/wallet-adapter-react'
-    version: 0.15.30
+    version: 0.15.31
     engines: {node: '>=16'}
     peerDependencies:
       '@solana/web3.js': '*'
@@ -1241,7 +1338,7 @@ packages:
     dependencies:
       '@solana-mobile/wallet-adapter-mobile': registry.npmjs.org/@solana-mobile/wallet-adapter-mobile/0.9.9_@solana+web3.js@1.66.0
       '@solana/wallet-adapter-base': registry.npmjs.org/@solana/wallet-adapter-base/0.9.22_@solana+web3.js@1.66.0
-      '@solana/wallet-standard-wallet-adapter-react': registry.npmjs.org/@solana/wallet-standard-wallet-adapter-react/1.0.1_hfs77ntkwyhxoeezhqxd7f42ja
+      '@solana/wallet-standard-wallet-adapter-react': registry.npmjs.org/@solana/wallet-standard-wallet-adapter-react/1.0.2_hfs77ntkwyhxoeezhqxd7f42ja
       '@solana/web3.js': registry.npmjs.org/@solana/web3.js/1.66.0
       react: registry.npmjs.org/react/17.0.2
     transitivePeerDependencies:
@@ -1345,7 +1442,7 @@ packages:
     dependencies:
       '@solana/wallet-adapter-base': registry.npmjs.org/@solana/wallet-adapter-base/0.9.22_@solana+web3.js@1.66.0
       '@solana/web3.js': registry.npmjs.org/@solana/web3.js/1.66.0
-      '@solflare-wallet/sdk': registry.npmjs.org/@solflare-wallet/sdk/1.2.0_@solana+web3.js@1.66.0
+      '@solflare-wallet/sdk': registry.npmjs.org/@solflare-wallet/sdk/1.2.1_@solana+web3.js@1.66.0
     dev: false
 
   registry.npmjs.org/@solana/wallet-adapter-sollet/0.11.16_@solana+web3.js@1.66.0:
@@ -1464,7 +1561,7 @@ packages:
     dependencies:
       '@solana/wallet-adapter-base': registry.npmjs.org/@solana/wallet-adapter-base/0.9.22_@solana+web3.js@1.66.0
       '@solana/web3.js': registry.npmjs.org/@solana/web3.js/1.66.0
-      '@toruslabs/solana-embed': registry.npmjs.org/@toruslabs/solana-embed/0.3.3_@babel+runtime@7.20.0
+      '@toruslabs/solana-embed': registry.npmjs.org/@toruslabs/solana-embed/0.3.4_@babel+runtime@7.20.0
       assert: registry.npmjs.org/assert/2.0.0
       crypto-browserify: registry.npmjs.org/crypto-browserify/3.12.0
       process: registry.npmjs.org/process/0.11.10
@@ -1658,11 +1755,11 @@ packages:
       '@solana/wallet-standard-features': registry.npmjs.org/@solana/wallet-standard-features/1.0.1
     dev: false
 
-  registry.npmjs.org/@solana/wallet-standard-wallet-adapter-base/1.0.1_@solana+web3.js@1.66.0:
-    resolution: {integrity: sha512-no3NwFIfWN653g1I2i8bbfwMjASzBSau9De8tQgoE+CPyQXJxNYyb2B5uw6SsJImMCES7fT2k4J0mM2OlUmreQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@solana/wallet-standard-wallet-adapter-base/-/wallet-standard-wallet-adapter-base-1.0.1.tgz}
-    id: registry.npmjs.org/@solana/wallet-standard-wallet-adapter-base/1.0.1
+  registry.npmjs.org/@solana/wallet-standard-wallet-adapter-base/1.0.2_@solana+web3.js@1.66.0:
+    resolution: {integrity: sha512-QqkupdWvWuihX87W6ijt174u6ZdP5OSFlNhZhuhoMlIdyI/sj7MhGsdppuRlMh65oVO2WNWTL9y2bO5Pbx+dfg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@solana/wallet-standard-wallet-adapter-base/-/wallet-standard-wallet-adapter-base-1.0.2.tgz}
+    id: registry.npmjs.org/@solana/wallet-standard-wallet-adapter-base/1.0.2
     name: '@solana/wallet-standard-wallet-adapter-base'
-    version: 1.0.1
+    version: 1.0.2
     engines: {node: '>=16'}
     peerDependencies:
       '@solana/web3.js': '*'
@@ -1684,11 +1781,11 @@ packages:
       '@wallet-standard/wallet': registry.npmjs.org/@wallet-standard/wallet/1.0.1
     dev: false
 
-  registry.npmjs.org/@solana/wallet-standard-wallet-adapter-react/1.0.1_hfs77ntkwyhxoeezhqxd7f42ja:
-    resolution: {integrity: sha512-sqYufApzZDFjyXtu5Yq7HQR8HzY5l9WuTZByfQxDOF62oMP2wx8sE0AGuAlisggJhGpMzNDsEek9VqED81eDzg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@solana/wallet-standard-wallet-adapter-react/-/wallet-standard-wallet-adapter-react-1.0.1.tgz}
-    id: registry.npmjs.org/@solana/wallet-standard-wallet-adapter-react/1.0.1
+  registry.npmjs.org/@solana/wallet-standard-wallet-adapter-react/1.0.2_hfs77ntkwyhxoeezhqxd7f42ja:
+    resolution: {integrity: sha512-0YTPUnjiSG5ajDP2hK8EipxkeHhO3+nCtXeF1eS/ZP2QcFAgS/4luywrn/6CdfzQ2cQYPCFdnG/QculpUp6bBg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@solana/wallet-standard-wallet-adapter-react/-/wallet-standard-wallet-adapter-react-1.0.2.tgz}
+    id: registry.npmjs.org/@solana/wallet-standard-wallet-adapter-react/1.0.2
     name: '@solana/wallet-standard-wallet-adapter-react'
-    version: 1.0.1
+    version: 1.0.2
     engines: {node: '>=16'}
     peerDependencies:
       '@solana/wallet-adapter-base': '*'
@@ -1700,7 +1797,7 @@ packages:
         optional: true
     dependencies:
       '@solana/wallet-adapter-base': registry.npmjs.org/@solana/wallet-adapter-base/0.9.22_@solana+web3.js@1.66.0
-      '@solana/wallet-standard-wallet-adapter-base': registry.npmjs.org/@solana/wallet-standard-wallet-adapter-base/1.0.1_@solana+web3.js@1.66.0
+      '@solana/wallet-standard-wallet-adapter-base': registry.npmjs.org/@solana/wallet-standard-wallet-adapter-base/1.0.2_@solana+web3.js@1.66.0
       '@wallet-standard/app': registry.npmjs.org/@wallet-standard/app/1.0.1
       '@wallet-standard/base': registry.npmjs.org/@wallet-standard/base/1.0.1
       react: registry.npmjs.org/react/17.0.2
@@ -1717,7 +1814,7 @@ packages:
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime/7.20.0
       '@noble/ed25519': registry.npmjs.org/@noble/ed25519/1.7.3
-      '@noble/hashes': registry.npmjs.org/@noble/hashes/1.2.0
+      '@noble/hashes': registry.npmjs.org/@noble/hashes/1.3.0
       '@noble/secp256k1': registry.npmjs.org/@noble/secp256k1/1.7.1
       '@solana/buffer-layout': registry.npmjs.org/@solana/buffer-layout/4.0.1
       bigint-buffer: registry.npmjs.org/bigint-buffer/1.1.5
@@ -1736,11 +1833,11 @@ packages:
       - utf-8-validate
     dev: false
 
-  registry.npmjs.org/@solflare-wallet/sdk/1.2.0_@solana+web3.js@1.66.0:
-    resolution: {integrity: sha512-J3KZJdeYJ2R7jPHa0F53iCtkQEdcD1j7yeFQ4oa6Kk6gU1MOqSEWZxrr56sVDKWuPT/gunzEXGrgcwjd7nxwjg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@solflare-wallet/sdk/-/sdk-1.2.0.tgz}
-    id: registry.npmjs.org/@solflare-wallet/sdk/1.2.0
+  registry.npmjs.org/@solflare-wallet/sdk/1.2.1_@solana+web3.js@1.66.0:
+    resolution: {integrity: sha512-ESF3rGZtcVFaIkX9gv7SXUbwbfBOn53l8u9vZJme3RZv4MEY/O1v5Sj2oYXhZiJ9V0PnZfByDUj8yx55j86F+A==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@solflare-wallet/sdk/-/sdk-1.2.1.tgz}
+    id: registry.npmjs.org/@solflare-wallet/sdk/1.2.1
     name: '@solflare-wallet/sdk'
-    version: 1.2.0
+    version: 1.2.1
     peerDependencies:
       '@solana/web3.js': '*'
     peerDependenciesMeta:
@@ -1951,7 +2048,7 @@ packages:
     dependencies:
       '@typescript-eslint/eslint-plugin': registry.npmjs.org/@typescript-eslint/eslint-plugin/4.13.0_xacbc5ghh6tt6crnaio23vvpiq
       '@typescript-eslint/parser': registry.npmjs.org/@typescript-eslint/parser/4.13.0
-      core-js: registry.npmjs.org/core-js/3.29.0
+      core-js: registry.npmjs.org/core-js/3.29.1
       eslint-config-airbnb-typescript: registry.npmjs.org/eslint-config-airbnb-typescript/12.0.0_kd7mimavzpfukmkmobmfgpufye
       react: registry.npmjs.org/react/17.0.2
       react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
@@ -2021,11 +2118,11 @@ packages:
       react-dom: registry.npmjs.org/react-dom/17.0.2_react@17.0.2
     dev: false
 
-  registry.npmjs.org/@toruslabs/base-controllers/2.7.0_@babel+runtime@7.20.0:
-    resolution: {integrity: sha512-K/cw34TZdKX6vfWcRJaka/IyucOuVLc5LcJubRLGCsO/yk86hnMUG1fYlVfQyy8fVXWERZe0d9yyyVAsnxDAww==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/base-controllers/-/base-controllers-2.7.0.tgz}
-    id: registry.npmjs.org/@toruslabs/base-controllers/2.7.0
+  registry.npmjs.org/@toruslabs/base-controllers/2.8.0_@babel+runtime@7.20.0:
+    resolution: {integrity: sha512-htHOYW6u9tUfV3ZYzZ8X5xAnm8nOhecR0m0LIGsePXMaU/lR7NbZ/3TG4xW//ZJYjXfVkyaU2ayJcwbJFIoHeA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/base-controllers/-/base-controllers-2.8.0.tgz}
+    id: registry.npmjs.org/@toruslabs/base-controllers/2.8.0
     name: '@toruslabs/base-controllers'
-    version: 2.7.0
+    version: 2.8.0
     peerDependencies:
       '@babel/runtime': '*'
     peerDependenciesMeta:
@@ -2033,14 +2130,14 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime/7.20.0
-      '@toruslabs/broadcast-channel': registry.npmjs.org/@toruslabs/broadcast-channel/6.1.1
-      '@toruslabs/http-helpers': registry.npmjs.org/@toruslabs/http-helpers/3.2.0_@babel+runtime@7.20.0
-      '@toruslabs/openlogin-jrpc': registry.npmjs.org/@toruslabs/openlogin-jrpc/3.0.0_@babel+runtime@7.20.0
+      '@ethereumjs/util': registry.npmjs.org/@ethereumjs/util/8.0.5
+      '@toruslabs/broadcast-channel': registry.npmjs.org/@toruslabs/broadcast-channel/6.2.0
+      '@toruslabs/http-helpers': registry.npmjs.org/@toruslabs/http-helpers/3.3.0_@babel+runtime@7.20.0
+      '@toruslabs/openlogin-jrpc': registry.npmjs.org/@toruslabs/openlogin-jrpc/3.2.0_@babel+runtime@7.20.0
       async-mutex: registry.npmjs.org/async-mutex/0.4.0
       bignumber.js: registry.npmjs.org/bignumber.js/9.1.1
       bowser: registry.npmjs.org/bowser/2.11.0
       eth-rpc-errors: registry.npmjs.org/eth-rpc-errors/4.0.3
-      ethereumjs-util: registry.npmjs.org/ethereumjs-util/7.1.5
       json-rpc-random-id: registry.npmjs.org/json-rpc-random-id/1.0.1
       lodash: registry.npmjs.org/lodash/4.17.21
       loglevel: registry.npmjs.org/loglevel/1.8.1
@@ -2051,14 +2148,14 @@ packages:
       - utf-8-validate
     dev: false
 
-  registry.npmjs.org/@toruslabs/broadcast-channel/6.1.1:
-    resolution: {integrity: sha512-FapnmyPLpqfrdbfyawlReRpluEKQ2riqCNOOZQz9KHPF8a/XsgYi/UAdrR02k6BHaZYyV6D52Oji1gM6CPj6EQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/broadcast-channel/-/broadcast-channel-6.1.1.tgz}
+  registry.npmjs.org/@toruslabs/broadcast-channel/6.2.0:
+    resolution: {integrity: sha512-hrVU9mYe5yOOmlaUi3TIYjyqJGaicomqsoHxb1e1iYCXOJ/QsbSLGEvo6nqAEucNfalGMhfKEUhvMi7Pwgzrow==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/broadcast-channel/-/broadcast-channel-6.2.0.tgz}
     name: '@toruslabs/broadcast-channel'
-    version: 6.1.1
+    version: 6.2.0
     dependencies:
-      '@babel/runtime': registry.npmjs.org/@babel/runtime/7.20.0
-      '@toruslabs/eccrypto': registry.npmjs.org/@toruslabs/eccrypto/1.1.8
-      '@toruslabs/metadata-helpers': registry.npmjs.org/@toruslabs/metadata-helpers/3.0.0_@babel+runtime@7.20.0
+      '@babel/runtime': registry.npmjs.org/@babel/runtime/7.21.0
+      '@toruslabs/eccrypto': registry.npmjs.org/@toruslabs/eccrypto/2.0.0
+      '@toruslabs/metadata-helpers': registry.npmjs.org/@toruslabs/metadata-helpers/3.1.0_@babel+runtime@7.21.0
       bowser: registry.npmjs.org/bowser/2.11.0
       keccak: registry.npmjs.org/keccak/3.0.3
       loglevel: registry.npmjs.org/loglevel/1.8.1
@@ -2072,25 +2169,19 @@ packages:
       - utf-8-validate
     dev: false
 
-  registry.npmjs.org/@toruslabs/eccrypto/1.1.8:
-    resolution: {integrity: sha512-5dIrO2KVqvnAPOPfJ2m6bnjp9vav9GIcCZXiXRW/bJuIDRLVxJhVvRlleF4oaEZPq5yX5piHq5jVHagNNS0jOQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/eccrypto/-/eccrypto-1.1.8.tgz}
+  registry.npmjs.org/@toruslabs/eccrypto/2.0.0:
+    resolution: {integrity: sha512-BBkWKHy0v3WOnFG3QYo+0W02ExpLghfYHuW5ePb9tAI2I8wwiWuuvvhz8JVYEACDsfDy0EikboJrgQVs5eZ7Tg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/eccrypto/-/eccrypto-2.0.0.tgz}
     name: '@toruslabs/eccrypto'
-    version: 1.1.8
-    requiresBuild: true
+    version: 2.0.0
     dependencies:
-      acorn: registry.npmjs.org/acorn/8.8.2
       elliptic: registry.npmjs.org/elliptic/6.5.4
-      es6-promise: registry.npmjs.org/es6-promise/4.2.8
-      nan: registry.npmjs.org/nan/2.17.0
-    optionalDependencies:
-      secp256k1: registry.npmjs.org/secp256k1/3.8.0
     dev: false
 
-  registry.npmjs.org/@toruslabs/http-helpers/3.2.0_@babel+runtime@7.20.0:
-    resolution: {integrity: sha512-fCfvBHfYzd7AyOYlBo7wihh5nj6+4Ik6V5+nI7H63oiKICjMlByTXSauTUa/qm2mjZJn/OmVYeV5guPIgxoW1w==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/http-helpers/-/http-helpers-3.2.0.tgz}
-    id: registry.npmjs.org/@toruslabs/http-helpers/3.2.0
+  registry.npmjs.org/@toruslabs/http-helpers/3.3.0_@babel+runtime@7.20.0:
+    resolution: {integrity: sha512-lmef2k/Z5Kv8MDff46sb/PY/QBlBFCvGkrzAxjlxC1JBHZO8pbUqMTW8YKRgbkwinH5sR5SFQIAngqitL885Ng==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/http-helpers/-/http-helpers-3.3.0.tgz}
+    id: registry.npmjs.org/@toruslabs/http-helpers/3.3.0
     name: '@toruslabs/http-helpers'
-    version: 3.2.0
+    version: 3.3.0
     engines: {node: '>=14.17.0', npm: '>=6.x'}
     peerDependencies:
       '@babel/runtime': '*'
@@ -2106,11 +2197,31 @@ packages:
       loglevel: registry.npmjs.org/loglevel/1.8.1
     dev: false
 
-  registry.npmjs.org/@toruslabs/metadata-helpers/3.0.0_@babel+runtime@7.20.0:
-    resolution: {integrity: sha512-0eWCIbKpaBx3/z3BDyWebxUisCS37Uxb0zxOEWizSXjGH/T6TJCrBeZFPmANN3hq47GoNCsRiku9cgfij1UMTQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/metadata-helpers/-/metadata-helpers-3.0.0.tgz}
-    id: registry.npmjs.org/@toruslabs/metadata-helpers/3.0.0
+  registry.npmjs.org/@toruslabs/http-helpers/3.3.0_@babel+runtime@7.21.0:
+    resolution: {integrity: sha512-lmef2k/Z5Kv8MDff46sb/PY/QBlBFCvGkrzAxjlxC1JBHZO8pbUqMTW8YKRgbkwinH5sR5SFQIAngqitL885Ng==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/http-helpers/-/http-helpers-3.3.0.tgz}
+    id: registry.npmjs.org/@toruslabs/http-helpers/3.3.0
+    name: '@toruslabs/http-helpers'
+    version: 3.3.0
+    engines: {node: '>=14.17.0', npm: '>=6.x'}
+    peerDependencies:
+      '@babel/runtime': '*'
+      '@sentry/types': '*'
+    peerDependenciesMeta:
+      '@babel/runtime':
+        optional: true
+      '@sentry/types':
+        optional: true
+    dependencies:
+      '@babel/runtime': registry.npmjs.org/@babel/runtime/7.21.0
+      lodash.merge: registry.npmjs.org/lodash.merge/4.6.2
+      loglevel: registry.npmjs.org/loglevel/1.8.1
+    dev: false
+
+  registry.npmjs.org/@toruslabs/metadata-helpers/3.1.0_@babel+runtime@7.21.0:
+    resolution: {integrity: sha512-ejLG48aDwR+ta2eY6cnVWSESx//5KOt363WYgAspNGhMJ3U+BFNvgjc96t+gsIRSiysUrZpCC25XPUTYJecvUQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/metadata-helpers/-/metadata-helpers-3.1.0.tgz}
+    id: registry.npmjs.org/@toruslabs/metadata-helpers/3.1.0
     name: '@toruslabs/metadata-helpers'
-    version: 3.0.0
+    version: 3.1.0
     engines: {node: '>=14.17.0', npm: '>=6.x'}
     peerDependencies:
       '@babel/runtime': '*'
@@ -2118,9 +2229,9 @@ packages:
       '@babel/runtime':
         optional: true
     dependencies:
-      '@babel/runtime': registry.npmjs.org/@babel/runtime/7.20.0
-      '@toruslabs/eccrypto': registry.npmjs.org/@toruslabs/eccrypto/1.1.8
-      '@toruslabs/http-helpers': registry.npmjs.org/@toruslabs/http-helpers/3.2.0_@babel+runtime@7.20.0
+      '@babel/runtime': registry.npmjs.org/@babel/runtime/7.21.0
+      '@toruslabs/eccrypto': registry.npmjs.org/@toruslabs/eccrypto/2.0.0
+      '@toruslabs/http-helpers': registry.npmjs.org/@toruslabs/http-helpers/3.3.0_@babel+runtime@7.21.0
       elliptic: registry.npmjs.org/elliptic/6.5.4
       json-stable-stringify: registry.npmjs.org/json-stable-stringify/1.0.2
       keccak: registry.npmjs.org/keccak/3.0.3
@@ -2128,33 +2239,11 @@ packages:
       - '@sentry/types'
     dev: false
 
-  registry.npmjs.org/@toruslabs/openlogin-jrpc/2.13.0_@babel+runtime@7.20.0:
-    resolution: {integrity: sha512-TEg50/84xSocHLb3MEtw0DaIa+bXU66TJJjjDrqGPjoRo97fn8F8jDW2AcVV+eug39xpfxPIw1FFdCtgunmz7w==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/openlogin-jrpc/-/openlogin-jrpc-2.13.0.tgz}
-    id: registry.npmjs.org/@toruslabs/openlogin-jrpc/2.13.0
+  registry.npmjs.org/@toruslabs/openlogin-jrpc/3.2.0_@babel+runtime@7.20.0:
+    resolution: {integrity: sha512-G+K0EHyVUaAEyeD4xGsnAZRpn/ner8lQ2HC2+pGKg6oGmzKI2wGMDcw2KMH6+HKlfBGVJ5/VR9AQfC/tZlLDmQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/openlogin-jrpc/-/openlogin-jrpc-3.2.0.tgz}
+    id: registry.npmjs.org/@toruslabs/openlogin-jrpc/3.2.0
     name: '@toruslabs/openlogin-jrpc'
-    version: 2.13.0
-    peerDependencies:
-      '@babel/runtime': '*'
-    peerDependenciesMeta:
-      '@babel/runtime':
-        optional: true
-    dependencies:
-      '@babel/runtime': registry.npmjs.org/@babel/runtime/7.20.0
-      '@toruslabs/openlogin-utils': registry.npmjs.org/@toruslabs/openlogin-utils/2.13.0_@babel+runtime@7.20.0
-      end-of-stream: registry.npmjs.org/end-of-stream/1.4.4
-      eth-rpc-errors: registry.npmjs.org/eth-rpc-errors/4.0.3
-      events: registry.npmjs.org/events/3.3.0
-      fast-safe-stringify: registry.npmjs.org/fast-safe-stringify/2.1.1
-      once: registry.npmjs.org/once/1.4.0
-      pump: registry.npmjs.org/pump/3.0.0
-      readable-stream: registry.npmjs.org/readable-stream/3.6.2
-    dev: false
-
-  registry.npmjs.org/@toruslabs/openlogin-jrpc/3.0.0_@babel+runtime@7.20.0:
-    resolution: {integrity: sha512-EbrPxx9JJDzTGPRGhpnoqngrwVRgNxwY86f6Vp4hCJnZNn/IgNz39KGROEi8SDNWADYuT29d8gyZ5Y0o79TOMA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/openlogin-jrpc/-/openlogin-jrpc-3.0.0.tgz}
-    id: registry.npmjs.org/@toruslabs/openlogin-jrpc/3.0.0
-    name: '@toruslabs/openlogin-jrpc'
-    version: 3.0.0
+    version: 3.2.0
     peerDependencies:
       '@babel/runtime': '*'
     peerDependenciesMeta:
@@ -2170,23 +2259,6 @@ packages:
       once: registry.npmjs.org/once/1.4.0
       pump: registry.npmjs.org/pump/3.0.0
       readable-stream: registry.npmjs.org/readable-stream/3.6.2
-    dev: false
-
-  registry.npmjs.org/@toruslabs/openlogin-utils/2.13.0_@babel+runtime@7.20.0:
-    resolution: {integrity: sha512-g4pj6hIdKcuyetVsUWqiAJmCooTS9hOADL31m7LTqgdXzX9oR437A+c8Dw8gzFVcHmkK16Yt2//GvlKnSsGILg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/openlogin-utils/-/openlogin-utils-2.13.0.tgz}
-    id: registry.npmjs.org/@toruslabs/openlogin-utils/2.13.0
-    name: '@toruslabs/openlogin-utils'
-    version: 2.13.0
-    peerDependencies:
-      '@babel/runtime': '*'
-    peerDependenciesMeta:
-      '@babel/runtime':
-        optional: true
-    dependencies:
-      '@babel/runtime': registry.npmjs.org/@babel/runtime/7.20.0
-      base64url: registry.npmjs.org/base64url/3.0.1
-      keccak: registry.npmjs.org/keccak/3.0.3
-      randombytes: registry.npmjs.org/randombytes/2.1.0
     dev: false
 
   registry.npmjs.org/@toruslabs/openlogin-utils/3.0.0_@babel+runtime@7.20.0:
@@ -2206,11 +2278,11 @@ packages:
       randombytes: registry.npmjs.org/randombytes/2.1.0
     dev: false
 
-  registry.npmjs.org/@toruslabs/solana-embed/0.3.3_@babel+runtime@7.20.0:
-    resolution: {integrity: sha512-Edw0p1oNNG+fk+3XIZZiIiwdi75lgtOpCjIK7G7PbR3ygJPVgM7e6L0MCOVNkX0LSJTc5HJFi9E0MiAf4cG7UQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/solana-embed/-/solana-embed-0.3.3.tgz}
-    id: registry.npmjs.org/@toruslabs/solana-embed/0.3.3
+  registry.npmjs.org/@toruslabs/solana-embed/0.3.4_@babel+runtime@7.20.0:
+    resolution: {integrity: sha512-yj+aBJoBAneap7Jlu9/OOp7irWNuC5CqAhyhVcmb0IjWrCUFnioLdL0U7UfGaqVm/5O0leJh7/Z5Ll+3toWJBg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@toruslabs/solana-embed/-/solana-embed-0.3.4.tgz}
+    id: registry.npmjs.org/@toruslabs/solana-embed/0.3.4
     name: '@toruslabs/solana-embed'
-    version: 0.3.3
+    version: 0.3.4
     engines: {node: '>=14.17.0', npm: '>=6.x'}
     peerDependencies:
       '@babel/runtime': '*'
@@ -2220,9 +2292,9 @@ packages:
     dependencies:
       '@babel/runtime': registry.npmjs.org/@babel/runtime/7.20.0
       '@solana/web3.js': registry.npmjs.org/@solana/web3.js/1.66.0
-      '@toruslabs/base-controllers': registry.npmjs.org/@toruslabs/base-controllers/2.7.0_@babel+runtime@7.20.0
-      '@toruslabs/http-helpers': registry.npmjs.org/@toruslabs/http-helpers/3.2.0_@babel+runtime@7.20.0
-      '@toruslabs/openlogin-jrpc': registry.npmjs.org/@toruslabs/openlogin-jrpc/2.13.0_@babel+runtime@7.20.0
+      '@toruslabs/base-controllers': registry.npmjs.org/@toruslabs/base-controllers/2.8.0_@babel+runtime@7.20.0
+      '@toruslabs/http-helpers': registry.npmjs.org/@toruslabs/http-helpers/3.3.0_@babel+runtime@7.20.0
+      '@toruslabs/openlogin-jrpc': registry.npmjs.org/@toruslabs/openlogin-jrpc/3.2.0_@babel+runtime@7.20.0
       eth-rpc-errors: registry.npmjs.org/eth-rpc-errors/4.0.3
       fast-deep-equal: registry.npmjs.org/fast-deep-equal/3.1.3
       is-stream: registry.npmjs.org/is-stream/2.0.1
@@ -2273,14 +2345,6 @@ packages:
     resolution: {integrity: sha512-XTIieEY+gvJ39ChLcB4If5zHtPxt3Syj5rgZR+e1ctpmK8NjPf0zFqsz4JpLJT0xla9GFDKjy8Cpu331nrmE1Q==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/aria-query/-/aria-query-5.0.1.tgz}
     name: '@types/aria-query'
     version: 5.0.1
-    dev: false
-
-  registry.npmjs.org/@types/bn.js/5.1.1:
-    resolution: {integrity: sha512-qNrYbZqMx0uJAfKnKclPh+dTwK33KfLHYqtyODwd5HnXOjnkhc4qgn3BrK6RWyGZm5+sIFE7Q7Vz6QQtJB7w7g==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/bn.js/-/bn.js-5.1.1.tgz}
-    name: '@types/bn.js'
-    version: 5.1.1
-    dependencies:
-      '@types/node': registry.npmjs.org/@types/node/12.20.4
     dev: false
 
   registry.npmjs.org/@types/connect/3.4.35:
@@ -2389,14 +2453,6 @@ packages:
     version: 4.0.0
     dev: false
 
-  registry.npmjs.org/@types/pbkdf2/3.1.0:
-    resolution: {integrity: sha512-Cf63Rv7jCQ0LaL8tNXmEyqTHuIJxRdlS5vMh1mj5voN4+QFhVZnlZruezqpWYDiJ8UTzhP0VmeLXCmBk66YrMQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/pbkdf2/-/pbkdf2-3.1.0.tgz}
-    name: '@types/pbkdf2'
-    version: 3.1.0
-    dependencies:
-      '@types/node': registry.npmjs.org/@types/node/12.20.4
-    dev: false
-
   registry.npmjs.org/@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz}
     name: '@types/prop-types'
@@ -2426,14 +2482,6 @@ packages:
     name: '@types/scheduler'
     version: 0.16.2
     dev: true
-
-  registry.npmjs.org/@types/secp256k1/4.0.3:
-    resolution: {integrity: sha512-Da66lEIFeIz9ltsdMZcpQvmrmmoqrfju8pm1BH8WbYjZSwUgCwXLb9C+9XYogwBITnbsSaMdVPb2ekf7TV+03w==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/secp256k1/-/secp256k1-4.0.3.tgz}
-    name: '@types/secp256k1'
-    version: 4.0.3
-    dependencies:
-      '@types/node': registry.npmjs.org/@types/node/12.20.4
-    dev: false
 
   registry.npmjs.org/@types/semver/7.3.13:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@types/semver/-/semver-7.3.13.tgz}
@@ -2634,14 +2682,14 @@ packages:
       '@typescript-eslint/visitor-keys': registry.npmjs.org/@typescript-eslint/visitor-keys/5.35.1
     dev: false
 
-  registry.npmjs.org/@typescript-eslint/scope-manager/5.54.1:
-    resolution: {integrity: sha512-zWKuGliXxvuxyM71UA/EcPxaviw39dB2504LqAmFDjmkpO8qNLHcmzlh6pbHs1h/7YQ9bnsO8CCcYCSA8sykUg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-5.54.1.tgz}
+  registry.npmjs.org/@typescript-eslint/scope-manager/5.55.0:
+    resolution: {integrity: sha512-OK+cIO1ZGhJYNCL//a3ROpsd83psf4dUJ4j7pdNVzd5DmIk+ffkuUIX2vcZQbEW/IR41DYsfJTB19tpCboxQuw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-5.55.0.tgz}
     name: '@typescript-eslint/scope-manager'
-    version: 5.54.1
+    version: 5.55.0
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
-      '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types/5.54.1
-      '@typescript-eslint/visitor-keys': registry.npmjs.org/@typescript-eslint/visitor-keys/5.54.1
+      '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types/5.55.0
+      '@typescript-eslint/visitor-keys': registry.npmjs.org/@typescript-eslint/visitor-keys/5.55.0
     dev: false
 
   registry.npmjs.org/@typescript-eslint/type-utils/5.35.1:
@@ -2686,10 +2734,10 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: false
 
-  registry.npmjs.org/@typescript-eslint/types/5.54.1:
-    resolution: {integrity: sha512-G9+1vVazrfAfbtmCapJX8jRo2E4MDXxgm/IMOF4oGh3kq7XuK3JRkOg6y2Qu1VsTRmWETyTkWt1wxy7X7/yLkw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@typescript-eslint/types/-/types-5.54.1.tgz}
+  registry.npmjs.org/@typescript-eslint/types/5.55.0:
+    resolution: {integrity: sha512-M4iRh4AG1ChrOL6Y+mETEKGeDnT7Sparn6fhZ5LtVJF1909D5O4uqK+C5NPbLmpfZ0XIIxCdwzKiijpZUOvOug==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@typescript-eslint/types/-/types-5.55.0.tgz}
     name: '@typescript-eslint/types'
-    version: 5.54.1
+    version: 5.55.0
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: false
 
@@ -2761,10 +2809,10 @@ packages:
       - supports-color
     dev: false
 
-  registry.npmjs.org/@typescript-eslint/typescript-estree/5.54.1:
-    resolution: {integrity: sha512-bjK5t+S6ffHnVwA0qRPTZrxKSaFYocwFIkZx5k7pvWfsB1I57pO/0M0Skatzzw1sCkjJ83AfGTL0oFIFiDX3bg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-5.54.1.tgz}
+  registry.npmjs.org/@typescript-eslint/typescript-estree/5.55.0:
+    resolution: {integrity: sha512-I7X4A9ovA8gdpWMpr7b1BN9eEbvlEtWhQvpxp/yogt48fy9Lj3iE3ild/1H3jKBBIYj5YYJmS2+9ystVhC7eaQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-5.55.0.tgz}
     name: '@typescript-eslint/typescript-estree'
-    version: 5.54.1
+    version: 5.55.0
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       typescript: '*'
@@ -2772,8 +2820,8 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types/5.54.1
-      '@typescript-eslint/visitor-keys': registry.npmjs.org/@typescript-eslint/visitor-keys/5.54.1
+      '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types/5.55.0
+      '@typescript-eslint/visitor-keys': registry.npmjs.org/@typescript-eslint/visitor-keys/5.55.0
       debug: registry.npmjs.org/debug/4.3.4_supports-color@8.1.1
       globby: registry.npmjs.org/globby/11.1.0
       is-glob: registry.npmjs.org/is-glob/4.0.3
@@ -2805,10 +2853,10 @@ packages:
       - typescript
     dev: false
 
-  registry.npmjs.org/@typescript-eslint/utils/5.54.1:
-    resolution: {integrity: sha512-IY5dyQM8XD1zfDe5X8jegX6r2EVU5o/WJnLu/znLPWCBF7KNGC+adacXnt5jEYS9JixDcoccI6CvE4RCjHMzCQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@typescript-eslint/utils/-/utils-5.54.1.tgz}
+  registry.npmjs.org/@typescript-eslint/utils/5.55.0:
+    resolution: {integrity: sha512-FkW+i2pQKcpDC3AY6DU54yl8Lfl14FVGYDgBTyGKB75cCwV3KpkpTMFi9d9j2WAJ4271LR2HeC5SEWF/CZmmfw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@typescript-eslint/utils/-/utils-5.55.0.tgz}
     name: '@typescript-eslint/utils'
-    version: 5.54.1
+    version: 5.55.0
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '*'
@@ -2816,13 +2864,13 @@ packages:
       eslint:
         optional: true
     dependencies:
+      '@eslint-community/eslint-utils': registry.npmjs.org/@eslint-community/eslint-utils/4.3.0
       '@types/json-schema': registry.npmjs.org/@types/json-schema/7.0.11
       '@types/semver': registry.npmjs.org/@types/semver/7.3.13
-      '@typescript-eslint/scope-manager': registry.npmjs.org/@typescript-eslint/scope-manager/5.54.1
-      '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types/5.54.1
-      '@typescript-eslint/typescript-estree': registry.npmjs.org/@typescript-eslint/typescript-estree/5.54.1
+      '@typescript-eslint/scope-manager': registry.npmjs.org/@typescript-eslint/scope-manager/5.55.0
+      '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types/5.55.0
+      '@typescript-eslint/typescript-estree': registry.npmjs.org/@typescript-eslint/typescript-estree/5.55.0
       eslint-scope: registry.npmjs.org/eslint-scope/5.1.1
-      eslint-utils: registry.npmjs.org/eslint-utils/3.0.0
       semver: registry.npmjs.org/semver/7.3.8
     transitivePeerDependencies:
       - supports-color
@@ -2859,13 +2907,13 @@ packages:
       eslint-visitor-keys: registry.npmjs.org/eslint-visitor-keys/3.3.0
     dev: false
 
-  registry.npmjs.org/@typescript-eslint/visitor-keys/5.54.1:
-    resolution: {integrity: sha512-q8iSoHTgwCfgcRJ2l2x+xCbu8nBlRAlsQ33k24Adj8eoVBE0f8dUeI+bAa8F84Mv05UGbAx57g2zrRsYIooqQg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-5.54.1.tgz}
+  registry.npmjs.org/@typescript-eslint/visitor-keys/5.55.0:
+    resolution: {integrity: sha512-q2dlHHwWgirKh1D3acnuApXG+VNXpEY5/AwRxDVuEQpxWaB0jCDe0jFMVMALJ3ebSfuOVE8/rMS+9ZOYGg1GWw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-5.55.0.tgz}
     name: '@typescript-eslint/visitor-keys'
-    version: 5.54.1
+    version: 5.55.0
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
-      '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types/5.54.1
+      '@typescript-eslint/types': registry.npmjs.org/@typescript-eslint/types/5.55.0
       eslint-visitor-keys: registry.npmjs.org/eslint-visitor-keys/3.3.0
     dev: false
 
@@ -2915,11 +2963,11 @@ packages:
       detect-browser: registry.npmjs.org/detect-browser/5.2.0
     dev: false
 
-  registry.npmjs.org/@walletconnect/core/2.4.9_@types+node@12.20.4:
-    resolution: {integrity: sha512-CrPs8j7earI847r1TpsFj8zij0zspQSd4OXBARLhphVvh5lv/4udcyQI77GfK0d2j6wUNla4gOBk3aKncm300A==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@walletconnect/core/-/core-2.4.9.tgz}
-    id: registry.npmjs.org/@walletconnect/core/2.4.9
+  registry.npmjs.org/@walletconnect/core/2.5.1_@types+node@12.20.4:
+    resolution: {integrity: sha512-Q+dH+LSK85PwpmbjAFoi9ddWTFFghyZWwi1bGfgFA4h3tk4vfh+F0oW44bREaeHAQ/y1va0f2OdK6/jagOeMLQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@walletconnect/core/-/core-2.5.1.tgz}
+    id: registry.npmjs.org/@walletconnect/core/2.5.1
     name: '@walletconnect/core'
-    version: 2.4.9
+    version: 2.5.1
     dependencies:
       '@walletconnect/heartbeat': registry.npmjs.org/@walletconnect/heartbeat/1.2.0_@types+node@12.20.4
       '@walletconnect/jsonrpc-provider': registry.npmjs.org/@walletconnect/jsonrpc-provider/1.0.9
@@ -2931,8 +2979,8 @@ packages:
       '@walletconnect/relay-auth': registry.npmjs.org/@walletconnect/relay-auth/1.0.4
       '@walletconnect/safe-json': registry.npmjs.org/@walletconnect/safe-json/1.0.1
       '@walletconnect/time': registry.npmjs.org/@walletconnect/time/1.0.2
-      '@walletconnect/types': registry.npmjs.org/@walletconnect/types/2.4.9_@types+node@12.20.4
-      '@walletconnect/utils': registry.npmjs.org/@walletconnect/utils/2.4.9_@types+node@12.20.4
+      '@walletconnect/types': registry.npmjs.org/@walletconnect/types/2.5.1_@types+node@12.20.4
+      '@walletconnect/utils': registry.npmjs.org/@walletconnect/utils/2.5.1_@types+node@12.20.4
       events: registry.npmjs.org/events/3.3.0
       lodash.isequal: registry.npmjs.org/lodash.isequal/4.5.0
       pino: registry.npmjs.org/pino/7.11.0
@@ -3111,21 +3159,20 @@ packages:
       tslib: registry.npmjs.org/tslib/1.14.1
     dev: false
 
-  registry.npmjs.org/@walletconnect/sign-client/2.4.9_@types+node@12.20.4:
-    resolution: {integrity: sha512-9O6Z2qqQ5eo/BlneAMci1AF/5hW+kpnsW8mXjrTEF2pT9IgpA5lq16fdM7D3AP01udSA0Mu4K0LFX3Qa1QbmSA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@walletconnect/sign-client/-/sign-client-2.4.9.tgz}
-    id: registry.npmjs.org/@walletconnect/sign-client/2.4.9
+  registry.npmjs.org/@walletconnect/sign-client/2.5.1_@types+node@12.20.4:
+    resolution: {integrity: sha512-c5HzOXr4EhhJ0ozxne4ahCyS8mbW1NSgTEcW/c8LxsaRcMejY8l+1DGwWGpeD4c6K1jmxKGCGS8HxjY+igN5+Q==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@walletconnect/sign-client/-/sign-client-2.5.1.tgz}
+    id: registry.npmjs.org/@walletconnect/sign-client/2.5.1
     name: '@walletconnect/sign-client'
-    version: 2.4.9
+    version: 2.5.1
     dependencies:
-      '@walletconnect/core': registry.npmjs.org/@walletconnect/core/2.4.9_@types+node@12.20.4
+      '@walletconnect/core': registry.npmjs.org/@walletconnect/core/2.5.1_@types+node@12.20.4
       '@walletconnect/events': registry.npmjs.org/@walletconnect/events/1.0.1
       '@walletconnect/heartbeat': registry.npmjs.org/@walletconnect/heartbeat/1.2.0_@types+node@12.20.4
-      '@walletconnect/jsonrpc-provider': registry.npmjs.org/@walletconnect/jsonrpc-provider/1.0.9
       '@walletconnect/jsonrpc-utils': registry.npmjs.org/@walletconnect/jsonrpc-utils/1.0.6
       '@walletconnect/logger': registry.npmjs.org/@walletconnect/logger/2.0.1
       '@walletconnect/time': registry.npmjs.org/@walletconnect/time/1.0.2
-      '@walletconnect/types': registry.npmjs.org/@walletconnect/types/2.4.9_@types+node@12.20.4
-      '@walletconnect/utils': registry.npmjs.org/@walletconnect/utils/2.4.9_@types+node@12.20.4
+      '@walletconnect/types': registry.npmjs.org/@walletconnect/types/2.5.1_@types+node@12.20.4
+      '@walletconnect/utils': registry.npmjs.org/@walletconnect/utils/2.5.1_@types+node@12.20.4
       events: registry.npmjs.org/events/3.3.0
       pino: registry.npmjs.org/pino/7.11.0
     transitivePeerDependencies:
@@ -3154,11 +3201,11 @@ packages:
     deprecated: 'WalletConnect''s v1 SDKs are now deprecated. Please upgrade to a v2 SDK. For details see: https://docs.walletconnect.com/'
     dev: false
 
-  registry.npmjs.org/@walletconnect/types/2.4.9_@types+node@12.20.4:
-    resolution: {integrity: sha512-Mv1yH8MI52JPBi1Qj/iDjMewjBVhy4TrWPiPrSU0zcUSpUzCmai/BxGMjEGOJ8gsEIFwfEkFkZJQoza2fVtFLA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@walletconnect/types/-/types-2.4.9.tgz}
-    id: registry.npmjs.org/@walletconnect/types/2.4.9
+  registry.npmjs.org/@walletconnect/types/2.5.1_@types+node@12.20.4:
+    resolution: {integrity: sha512-PctuQw1Kt0tJ8mYU8p1JOXYxv8PhvNoXXtLaGkGZ/9knn1dJaQRlMDEN0iHG6qXlSAo0tW8Q3PtK5tetf5dJ0g==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@walletconnect/types/-/types-2.5.1.tgz}
+    id: registry.npmjs.org/@walletconnect/types/2.5.1
     name: '@walletconnect/types'
-    version: 2.4.9
+    version: 2.5.1
     dependencies:
       '@walletconnect/events': registry.npmjs.org/@walletconnect/events/1.0.1
       '@walletconnect/heartbeat': registry.npmjs.org/@walletconnect/heartbeat/1.2.0_@types+node@12.20.4
@@ -3175,11 +3222,11 @@ packages:
       - typescript
     dev: false
 
-  registry.npmjs.org/@walletconnect/utils/2.4.9_@types+node@12.20.4:
-    resolution: {integrity: sha512-Mq5ZgXAn/SJZJYkINkl07YprnuvFRi+A7c3wapgvKjFB6msFMllBa4UFukON5+5ZCScSwPMwxoUX4EBjWnbaWA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@walletconnect/utils/-/utils-2.4.9.tgz}
-    id: registry.npmjs.org/@walletconnect/utils/2.4.9
+  registry.npmjs.org/@walletconnect/utils/2.5.1_@types+node@12.20.4:
+    resolution: {integrity: sha512-+Pr3kj0CjxEeSxoRtj9lOfsDRLjwI5RyuwASUy4mcTGil59rdAK0Z7Uht3/+HEXB05AUyEJihpQEwworcGu/uw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/@walletconnect/utils/-/utils-2.5.1.tgz}
+    id: registry.npmjs.org/@walletconnect/utils/2.5.1
     name: '@walletconnect/utils'
-    version: 2.4.9
+    version: 2.5.1
     dependencies:
       '@stablelib/chacha20poly1305': registry.npmjs.org/@stablelib/chacha20poly1305/1.0.1
       '@stablelib/hkdf': registry.npmjs.org/@stablelib/hkdf/1.0.1
@@ -3190,7 +3237,7 @@ packages:
       '@walletconnect/relay-api': registry.npmjs.org/@walletconnect/relay-api/1.0.9
       '@walletconnect/safe-json': registry.npmjs.org/@walletconnect/safe-json/1.0.1
       '@walletconnect/time': registry.npmjs.org/@walletconnect/time/1.0.2
-      '@walletconnect/types': registry.npmjs.org/@walletconnect/types/2.4.9_@types+node@12.20.4
+      '@walletconnect/types': registry.npmjs.org/@walletconnect/types/2.5.1_@types+node@12.20.4
       '@walletconnect/window-getters': registry.npmjs.org/@walletconnect/window-getters/1.0.1
       '@walletconnect/window-metadata': registry.npmjs.org/@walletconnect/window-metadata/1.0.1
       detect-browser: registry.npmjs.org/detect-browser/5.3.0
@@ -3399,6 +3446,15 @@ packages:
       deep-equal: registry.npmjs.org/deep-equal/2.2.0
     dev: false
 
+  registry.npmjs.org/array-buffer-byte-length/1.0.0:
+    resolution: {integrity: sha512-LPuwb2P+NrQw3XhxGc36+XSvuBPopovXYTR9Ew++Du9Yb/bx5AzBfrIsBoj0EZUifjQU+sHL21sseZ3jerWO/A==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/array-buffer-byte-length/-/array-buffer-byte-length-1.0.0.tgz}
+    name: array-buffer-byte-length
+    version: 1.0.0
+    dependencies:
+      call-bind: registry.npmjs.org/call-bind/1.0.2
+      is-array-buffer: registry.npmjs.org/is-array-buffer/3.0.2
+    dev: false
+
   registry.npmjs.org/array-includes/3.1.6:
     resolution: {integrity: sha512-sgTbLvL6cNnw24FnbaDyjmvddQ2ML8arZsgaJhoABMoplz/4QRhtrYS+alr1BUM1Bwp6dhx8vVCBSLG+StwOFw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/array-includes/-/array-includes-3.1.6.tgz}
     name: array-includes
@@ -3407,7 +3463,7 @@ packages:
     dependencies:
       call-bind: registry.npmjs.org/call-bind/1.0.2
       define-properties: registry.npmjs.org/define-properties/1.2.0
-      es-abstract: registry.npmjs.org/es-abstract/1.21.1
+      es-abstract: registry.npmjs.org/es-abstract/1.21.2
       get-intrinsic: registry.npmjs.org/get-intrinsic/1.2.0
       is-string: registry.npmjs.org/is-string/1.0.7
     dev: false
@@ -3427,7 +3483,7 @@ packages:
     dependencies:
       call-bind: registry.npmjs.org/call-bind/1.0.2
       define-properties: registry.npmjs.org/define-properties/1.2.0
-      es-abstract: registry.npmjs.org/es-abstract/1.21.1
+      es-abstract: registry.npmjs.org/es-abstract/1.21.2
       es-shim-unscopables: registry.npmjs.org/es-shim-unscopables/1.0.0
     dev: false
 
@@ -3439,7 +3495,7 @@ packages:
     dependencies:
       call-bind: registry.npmjs.org/call-bind/1.0.2
       define-properties: registry.npmjs.org/define-properties/1.2.0
-      es-abstract: registry.npmjs.org/es-abstract/1.21.1
+      es-abstract: registry.npmjs.org/es-abstract/1.21.2
       es-shim-unscopables: registry.npmjs.org/es-shim-unscopables/1.0.0
     dev: false
 
@@ -3590,21 +3646,6 @@ packages:
     version: 1.5.0
     dependencies:
       file-uri-to-path: registry.npmjs.org/file-uri-to-path/1.0.0
-    dev: false
-
-  registry.npmjs.org/bip66/1.1.5:
-    resolution: {integrity: sha512-nemMHz95EmS38a26XbbdxIYj5csHd3RMP3H5bwQknX0WYHF01qhpufP42mLOwVICuH2JmhIhXiWs89MfUGL7Xw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/bip66/-/bip66-1.1.5.tgz}
-    name: bip66
-    version: 1.1.5
-    dependencies:
-      safe-buffer: registry.npmjs.org/safe-buffer/5.2.1
-    dev: false
-    optional: true
-
-  registry.npmjs.org/blakejs/1.2.1:
-    resolution: {integrity: sha512-QXUSXI3QVc/gJME0dBpXrag1kbzOqCjCX8/b54ntNyW6sjtoqxqRk3LTmXzaJoh71zMsDCjM+47jS7XiwN/+fQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/blakejs/-/blakejs-1.2.1.tgz}
-    name: blakejs
-    version: 1.2.1
     dev: false
 
   registry.npmjs.org/bn.js/4.12.0:
@@ -3865,6 +3906,13 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
+  registry.npmjs.org/case/1.6.3:
+    resolution: {integrity: sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/case/-/case-1.6.3.tgz}
+    name: case
+    version: 1.6.3
+    engines: {node: '>= 0.8.0'}
+    dev: false
+
   registry.npmjs.org/cbor-sync/1.0.4:
     resolution: {integrity: sha512-GWlXN4wiz0vdWWXBU71Dvc1q3aBo0HytqwAZnXF1wOwjqNnDWA1vZ1gDMFLlqohak31VQzmhiYfiCX5QSSfagA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/cbor-sync/-/cbor-sync-1.0.4.tgz}
     name: cbor-sync
@@ -4087,17 +4135,17 @@ packages:
       toggle-selection: registry.npmjs.org/toggle-selection/1.0.6
     dev: false
 
-  registry.npmjs.org/core-js-pure/3.29.0:
-    resolution: {integrity: sha512-v94gUjN5UTe1n0yN/opTihJ8QBWD2O8i19RfTZR7foONPWArnjB96QA/wk5ozu1mm6ja3udQCzOzwQXTxi3xOQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/core-js-pure/-/core-js-pure-3.29.0.tgz}
+  registry.npmjs.org/core-js-pure/3.29.1:
+    resolution: {integrity: sha512-4En6zYVi0i0XlXHVz/bi6l1XDjCqkKRq765NXuX+SnaIatlE96Odt5lMLjdxUiNI1v9OXI5DSLWYPlmTfkTktg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/core-js-pure/-/core-js-pure-3.29.1.tgz}
     name: core-js-pure
-    version: 3.29.0
+    version: 3.29.1
     requiresBuild: true
     dev: false
 
-  registry.npmjs.org/core-js/3.29.0:
-    resolution: {integrity: sha512-VG23vuEisJNkGl6XQmFJd3rEG/so/CNatqeE+7uZAwTSwFeB/qaO0be8xZYUNWprJ/GIwL8aMt9cj1kvbpTZhg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/core-js/-/core-js-3.29.0.tgz}
+  registry.npmjs.org/core-js/3.29.1:
+    resolution: {integrity: sha512-+jwgnhg6cQxKYIIjGtAHq2nwUOolo9eoFZ4sHfUH09BLXBgxnH4gA0zEd+t+BO2cNB8idaBtZFcFTRjQJRJmAw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/core-js/-/core-js-3.29.1.tgz}
     name: core-js
-    version: 3.29.0
+    version: 3.29.1
     dev: false
 
   registry.npmjs.org/core-util-is/1.0.3:
@@ -4476,18 +4524,6 @@ packages:
     version: 0.5.16
     dev: false
 
-  registry.npmjs.org/drbg.js/1.0.1:
-    resolution: {integrity: sha512-F4wZ06PvqxYLFEZKkFxTDcns9oFNk34hvmJSEwdzsxVQ8YI5YaxtACgQatkYgv2VI2CFkUd2Y+xosPQnHv809g==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/drbg.js/-/drbg.js-1.0.1.tgz}
-    name: drbg.js
-    version: 1.0.1
-    engines: {node: '>=0.10'}
-    dependencies:
-      browserify-aes: registry.npmjs.org/browserify-aes/1.2.0
-      create-hash: registry.npmjs.org/create-hash/1.2.0
-      create-hmac: registry.npmjs.org/create-hmac/1.1.7
-    dev: false
-    optional: true
-
   registry.npmjs.org/duplexify/4.1.2:
     resolution: {integrity: sha512-fz3OjcNCHmRP12MJoZMPglx8m4rrFP8rovnk4vT8Fs+aonZoCwGg10dSsQsfP/E62eZcPTMSMP6686fu9Qlqtw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/duplexify/-/duplexify-4.1.2.tgz}
     name: duplexify
@@ -4582,17 +4618,17 @@ packages:
       is-arrayish: registry.npmjs.org/is-arrayish/0.2.1
     dev: false
 
-  registry.npmjs.org/es-abstract/1.21.1:
-    resolution: {integrity: sha512-QudMsPOz86xYz/1dG1OuGBKOELjCh99IIWHLzy5znUB6j8xG2yMA7bfTV86VSqKF+Y/H08vQPR+9jyXpuC6hfg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/es-abstract/-/es-abstract-1.21.1.tgz}
+  registry.npmjs.org/es-abstract/1.21.2:
+    resolution: {integrity: sha512-y/B5POM2iBnIxCiernH1G7rC9qQoM77lLIMQLuob0zhp8C56Po81+2Nj0WFKnd0pNReDTnkYryc+zhOzpEIROg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/es-abstract/-/es-abstract-1.21.2.tgz}
     name: es-abstract
-    version: 1.21.1
+    version: 1.21.2
     engines: {node: '>= 0.4'}
     dependencies:
+      array-buffer-byte-length: registry.npmjs.org/array-buffer-byte-length/1.0.0
       available-typed-arrays: registry.npmjs.org/available-typed-arrays/1.0.5
       call-bind: registry.npmjs.org/call-bind/1.0.2
       es-set-tostringtag: registry.npmjs.org/es-set-tostringtag/2.0.1
       es-to-primitive: registry.npmjs.org/es-to-primitive/1.2.1
-      function-bind: registry.npmjs.org/function-bind/1.1.1
       function.prototype.name: registry.npmjs.org/function.prototype.name/1.1.5
       get-intrinsic: registry.npmjs.org/get-intrinsic/1.2.0
       get-symbol-description: registry.npmjs.org/get-symbol-description/1.0.0
@@ -4616,6 +4652,7 @@ packages:
       object.assign: registry.npmjs.org/object.assign/4.1.4
       regexp.prototype.flags: registry.npmjs.org/regexp.prototype.flags/1.4.3
       safe-regex-test: registry.npmjs.org/safe-regex-test/1.0.0
+      string.prototype.trim: registry.npmjs.org/string.prototype.trim/1.2.7
       string.prototype.trimend: registry.npmjs.org/string.prototype.trimend/1.0.6
       string.prototype.trimstart: registry.npmjs.org/string.prototype.trimstart/1.0.6
       typed-array-length: registry.npmjs.org/typed-array-length/1.0.4
@@ -4910,7 +4947,7 @@ packages:
         optional: true
     dependencies:
       '@typescript-eslint/eslint-plugin': registry.npmjs.org/@typescript-eslint/eslint-plugin/5.35.1
-      '@typescript-eslint/utils': registry.npmjs.org/@typescript-eslint/utils/5.54.1
+      '@typescript-eslint/utils': registry.npmjs.org/@typescript-eslint/utils/5.55.0
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -5134,39 +5171,15 @@ packages:
       fast-safe-stringify: registry.npmjs.org/fast-safe-stringify/2.1.1
     dev: false
 
-  registry.npmjs.org/ethereum-cryptography/0.1.3:
-    resolution: {integrity: sha512-w8/4x1SGGzc+tO97TASLja6SLd3fRIK2tLVcV2Gx4IB21hE19atll5Cq9o3d0ZmAYC/8aw0ipieTSiekAea4SQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/ethereum-cryptography/-/ethereum-cryptography-0.1.3.tgz}
+  registry.npmjs.org/ethereum-cryptography/1.2.0:
+    resolution: {integrity: sha512-6yFQC9b5ug6/17CQpCyE3k9eKBMdhyVjzUy1WkiuY/E4vj/SXDBbCw8QEIaXqf0Mf2SnY6RmpDcwlUmBSS0EJw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/ethereum-cryptography/-/ethereum-cryptography-1.2.0.tgz}
     name: ethereum-cryptography
-    version: 0.1.3
+    version: 1.2.0
     dependencies:
-      '@types/pbkdf2': registry.npmjs.org/@types/pbkdf2/3.1.0
-      '@types/secp256k1': registry.npmjs.org/@types/secp256k1/4.0.3
-      blakejs: registry.npmjs.org/blakejs/1.2.1
-      browserify-aes: registry.npmjs.org/browserify-aes/1.2.0
-      bs58check: registry.npmjs.org/bs58check/2.1.2
-      create-hash: registry.npmjs.org/create-hash/1.2.0
-      create-hmac: registry.npmjs.org/create-hmac/1.1.7
-      hash.js: registry.npmjs.org/hash.js/1.1.7
-      keccak: registry.npmjs.org/keccak/3.0.3
-      pbkdf2: registry.npmjs.org/pbkdf2/3.1.2
-      randombytes: registry.npmjs.org/randombytes/2.1.0
-      safe-buffer: registry.npmjs.org/safe-buffer/5.2.1
-      scrypt-js: registry.npmjs.org/scrypt-js/3.0.1
-      secp256k1: registry.npmjs.org/secp256k1/4.0.3
-      setimmediate: registry.npmjs.org/setimmediate/1.0.5
-    dev: false
-
-  registry.npmjs.org/ethereumjs-util/7.1.5:
-    resolution: {integrity: sha512-SDl5kKrQAudFBUe5OJM9Ac6WmMyYmXX/6sTmLZ3ffG2eY6ZIGBes3pEDxNN6V72WyOw4CPD5RomKdsa8DAAwLg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/ethereumjs-util/-/ethereumjs-util-7.1.5.tgz}
-    name: ethereumjs-util
-    version: 7.1.5
-    engines: {node: '>=10.0.0'}
-    dependencies:
-      '@types/bn.js': registry.npmjs.org/@types/bn.js/5.1.1
-      bn.js: registry.npmjs.org/bn.js/5.2.1
-      create-hash: registry.npmjs.org/create-hash/1.2.0
-      ethereum-cryptography: registry.npmjs.org/ethereum-cryptography/0.1.3
-      rlp: registry.npmjs.org/rlp/2.2.7
+      '@noble/hashes': registry.npmjs.org/@noble/hashes/1.2.0
+      '@noble/secp256k1': registry.npmjs.org/@noble/secp256k1/1.7.1
+      '@scure/bip32': registry.npmjs.org/@scure/bip32/1.1.5
+      '@scure/bip39': registry.npmjs.org/@scure/bip39/1.1.1
     dev: false
 
   registry.npmjs.org/eventemitter3/4.0.7:
@@ -5330,7 +5343,7 @@ packages:
     version: 8.1.0
     engines: {node: '>=6 <7 || >=8'}
     dependencies:
-      graceful-fs: registry.npmjs.org/graceful-fs/4.2.10
+      graceful-fs: registry.npmjs.org/graceful-fs/4.2.11
       jsonfile: registry.npmjs.org/jsonfile/4.0.0
       universalify: registry.npmjs.org/universalify/0.1.2
     dev: false
@@ -5365,7 +5378,7 @@ packages:
     dependencies:
       call-bind: registry.npmjs.org/call-bind/1.0.2
       define-properties: registry.npmjs.org/define-properties/1.2.0
-      es-abstract: registry.npmjs.org/es-abstract/1.21.1
+      es-abstract: registry.npmjs.org/es-abstract/1.21.2
       functions-have-names: registry.npmjs.org/functions-have-names/1.2.3
     dev: false
 
@@ -5488,10 +5501,10 @@ packages:
       get-intrinsic: registry.npmjs.org/get-intrinsic/1.2.0
     dev: false
 
-  registry.npmjs.org/graceful-fs/4.2.10:
-    resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.10.tgz}
+  registry.npmjs.org/graceful-fs/4.2.11:
+    resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz}
     name: graceful-fs
-    version: 4.2.10
+    version: 4.2.11
     dev: false
 
   registry.npmjs.org/graphlib/2.1.8:
@@ -6144,7 +6157,7 @@ packages:
     name: jsonfile
     version: 4.0.0
     optionalDependencies:
-      graceful-fs: registry.npmjs.org/graceful-fs/4.2.10
+      graceful-fs: registry.npmjs.org/graceful-fs/4.2.11
     dev: false
 
   registry.npmjs.org/jsonify/0.0.1:
@@ -6944,12 +6957,6 @@ packages:
     version: 9.9.0
     dev: false
 
-  registry.npmjs.org/nan/2.17.0:
-    resolution: {integrity: sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/nan/-/nan-2.17.0.tgz}
-    name: nan
-    version: 2.17.0
-    dev: false
-
   registry.npmjs.org/nanoid/3.3.3:
     resolution: {integrity: sha512-p1sjXuopFs0xg+fPASzQ28agW1oHD7xDsd9Xkf3T15H3c/cifrFHVwrh74PdoklAPi+i7MdRsE47vm2r6JoB+w==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/nanoid/-/nanoid-3.3.3.tgz}
     name: nanoid
@@ -7064,7 +7071,7 @@ packages:
     dependencies:
       call-bind: registry.npmjs.org/call-bind/1.0.2
       define-properties: registry.npmjs.org/define-properties/1.2.0
-      es-abstract: registry.npmjs.org/es-abstract/1.21.1
+      es-abstract: registry.npmjs.org/es-abstract/1.21.2
     dev: false
 
   registry.npmjs.org/object.fromentries/2.0.6:
@@ -7075,7 +7082,7 @@ packages:
     dependencies:
       call-bind: registry.npmjs.org/call-bind/1.0.2
       define-properties: registry.npmjs.org/define-properties/1.2.0
-      es-abstract: registry.npmjs.org/es-abstract/1.21.1
+      es-abstract: registry.npmjs.org/es-abstract/1.21.2
     dev: false
 
   registry.npmjs.org/object.hasown/1.1.2:
@@ -7084,7 +7091,7 @@ packages:
     version: 1.1.2
     dependencies:
       define-properties: registry.npmjs.org/define-properties/1.2.0
-      es-abstract: registry.npmjs.org/es-abstract/1.21.1
+      es-abstract: registry.npmjs.org/es-abstract/1.21.2
     dev: false
 
   registry.npmjs.org/object.values/1.1.6:
@@ -7095,7 +7102,7 @@ packages:
     dependencies:
       call-bind: registry.npmjs.org/call-bind/1.0.2
       define-properties: registry.npmjs.org/define-properties/1.2.0
-      es-abstract: registry.npmjs.org/es-abstract/1.21.1
+      es-abstract: registry.npmjs.org/es-abstract/1.21.2
     dev: false
 
   registry.npmjs.org/oblivious-set/1.1.1:
@@ -7899,15 +7906,6 @@ packages:
       inherits: registry.npmjs.org/inherits/2.0.4
     dev: false
 
-  registry.npmjs.org/rlp/2.2.7:
-    resolution: {integrity: sha512-d5gdPmgQ0Z+AklL2NVXr/IoSjNZFfTVvQWzL/AM2AOcSzYP2xjlb0AC8YyCLc41MSNf6P6QVtjgPdmVtzb+4lQ==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/rlp/-/rlp-2.2.7.tgz}
-    name: rlp
-    version: 2.2.7
-    hasBin: true
-    dependencies:
-      bn.js: registry.npmjs.org/bn.js/5.2.1
-    dev: false
-
   registry.npmjs.org/rpc-websockets/7.5.1:
     resolution: {integrity: sha512-kGFkeTsmd37pHPMaHIgN1LVKXMi0JD782v4Ds9ZKtLlwdTKjn+CxM9A9/gLT2LaOuEcEFGL98h1QWQtlOIdW0w==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/rpc-websockets/-/rpc-websockets-7.5.1.tgz}
     name: rpc-websockets
@@ -8026,46 +8024,10 @@ packages:
       object-assign: registry.npmjs.org/object-assign/4.1.1
     dev: false
 
-  registry.npmjs.org/scrypt-js/3.0.1:
-    resolution: {integrity: sha512-cdwTTnqPu0Hyvf5in5asVdZocVDTNRmR7XEcJuIzMjJeSHybHl7vpB66AzwTaIg6CLSbtjcxc8fqcySfnTkccA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/scrypt-js/-/scrypt-js-3.0.1.tgz}
-    name: scrypt-js
-    version: 3.0.1
-    dev: false
-
   registry.npmjs.org/sdp/2.12.0:
     resolution: {integrity: sha512-jhXqQAQVM+8Xj5EjJGVweuEzgtGWb3tmEEpl3CLP3cStInSbVHSg0QWOGQzNq8pSID4JkpeV2mPqlMDLrm0/Vw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/sdp/-/sdp-2.12.0.tgz}
     name: sdp
     version: 2.12.0
-    dev: false
-
-  registry.npmjs.org/secp256k1/3.8.0:
-    resolution: {integrity: sha512-k5ke5avRZbtl9Tqx/SA7CbY3NF6Ro+Sj9cZxezFzuBlLDmyqPiL8hJJ+EmzD8Ig4LUDByHJ3/iPOVoRixs/hmw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/secp256k1/-/secp256k1-3.8.0.tgz}
-    name: secp256k1
-    version: 3.8.0
-    engines: {node: '>=4.0.0'}
-    requiresBuild: true
-    dependencies:
-      bindings: registry.npmjs.org/bindings/1.5.0
-      bip66: registry.npmjs.org/bip66/1.1.5
-      bn.js: registry.npmjs.org/bn.js/4.12.0
-      create-hash: registry.npmjs.org/create-hash/1.2.0
-      drbg.js: registry.npmjs.org/drbg.js/1.0.1
-      elliptic: registry.npmjs.org/elliptic/6.5.4
-      nan: registry.npmjs.org/nan/2.17.0
-      safe-buffer: registry.npmjs.org/safe-buffer/5.2.1
-    dev: false
-    optional: true
-
-  registry.npmjs.org/secp256k1/4.0.3:
-    resolution: {integrity: sha512-NLZVf+ROMxwtEj3Xa562qgv2BK5e2WNmXPiOdVIPLgs6lyTzMvBq0aWTYMI5XCP9jZMVKOcqZLw/Wc4vDkuxhA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/secp256k1/-/secp256k1-4.0.3.tgz}
-    name: secp256k1
-    version: 4.0.3
-    engines: {node: '>=10.0.0'}
-    requiresBuild: true
-    dependencies:
-      elliptic: registry.npmjs.org/elliptic/6.5.4
-      node-addon-api: registry.npmjs.org/node-addon-api/2.0.2
-      node-gyp-build: registry.npmjs.org/node-gyp-build/4.6.0
     dev: false
 
   registry.npmjs.org/semver/6.3.0:
@@ -8097,12 +8059,6 @@ packages:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz}
     name: set-blocking
     version: 2.0.0
-    dev: false
-
-  registry.npmjs.org/setimmediate/1.0.5:
-    resolution: {integrity: sha512-MATJdZp8sLqDl/68LfQmbP8zKPLQNV6BIZoIgrscFDQ+RsvK/BxeDQOgyxKKoh0y/8h3BqVFnCqQ/gd+reiIXA==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/setimmediate/-/setimmediate-1.0.5.tgz}
-    name: setimmediate
-    version: 1.0.5
     dev: false
 
   registry.npmjs.org/sha.js/2.4.11:
@@ -8265,12 +8221,23 @@ packages:
     dependencies:
       call-bind: registry.npmjs.org/call-bind/1.0.2
       define-properties: registry.npmjs.org/define-properties/1.2.0
-      es-abstract: registry.npmjs.org/es-abstract/1.21.1
+      es-abstract: registry.npmjs.org/es-abstract/1.21.2
       get-intrinsic: registry.npmjs.org/get-intrinsic/1.2.0
       has-symbols: registry.npmjs.org/has-symbols/1.0.3
       internal-slot: registry.npmjs.org/internal-slot/1.0.5
       regexp.prototype.flags: registry.npmjs.org/regexp.prototype.flags/1.4.3
       side-channel: registry.npmjs.org/side-channel/1.0.4
+    dev: false
+
+  registry.npmjs.org/string.prototype.trim/1.2.7:
+    resolution: {integrity: sha512-p6TmeT1T3411M8Cgg9wBTMRtY2q9+PNy9EV1i2lIXUN/btt763oIfxwN3RR8VU6wHX8j/1CFy0L+YuThm6bgOg==, registry: https://node.bit.cloud/, tarball: https://registry.npmjs.org/string.prototype.trim/-/string.prototype.trim-1.2.7.tgz}
+    name: string.prototype.trim
+    version: 1.2.7
+    engines: {node: '>= 0.4'}
+    dependencies:
+      call-bind: registry.npmjs.org/call-bind/1.0.2
+      define-properties: registry.npmjs.org/define-properties/1.2.0
+      es-abstract: registry.npmjs.org/es-abstract/1.21.2
     dev: false
 
   registry.npmjs.org/string.prototype.trimend/1.0.6:
@@ -8280,7 +8247,7 @@ packages:
     dependencies:
       call-bind: registry.npmjs.org/call-bind/1.0.2
       define-properties: registry.npmjs.org/define-properties/1.2.0
-      es-abstract: registry.npmjs.org/es-abstract/1.21.1
+      es-abstract: registry.npmjs.org/es-abstract/1.21.2
     dev: false
 
   registry.npmjs.org/string.prototype.trimstart/1.0.6:
@@ -8290,7 +8257,7 @@ packages:
     dependencies:
       call-bind: registry.npmjs.org/call-bind/1.0.2
       define-properties: registry.npmjs.org/define-properties/1.2.0
-      es-abstract: registry.npmjs.org/es-abstract/1.21.1
+      es-abstract: registry.npmjs.org/es-abstract/1.21.2
     dev: false
 
   registry.npmjs.org/string_decoder/1.3.0:

@@ -9,7 +9,7 @@ export interface ChartTradeType {
   marketAddress: string
 }
 
-const baseUrl = 'http://api.corpus.app'
+const baseUrl = 'https://api.corpus.app'
 
 export default class ChartApi {
   static URL = `${baseUrl}/`
@@ -34,7 +34,7 @@ export default class ChartApi {
   static async getRecentTrades(
     marketAddress: string
   ): Promise<ChartTradeType[] | null> {
-    if (!marketAddress) return
+    if (!marketAddress) return null
     return ChartApi.get(`trades/address/${marketAddress}`)
   }
 
@@ -44,7 +44,7 @@ export default class ChartApi {
     from: number,
     to: number
   ): Promise<ChartTradeType[] | null> {
-    if (!symbol) return
+    if (!symbol) return null
     return ChartApi.get(
       `tv/history?symbol=${symbol}&resolution=${resolution}&from=${from}&to=${to}`
     )

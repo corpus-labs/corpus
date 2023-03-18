@@ -17,7 +17,7 @@ import {
 } from '@solana/spl-token'
 import { WalletContextState } from '@solana/wallet-adapter-react'
 
-export const useAssociatedTokenAccount = async (
+export const getAssociatedTokenAccount = async (
   mint: PublicKey,
   owner: PublicKey,
   wallet: WalletContextState,

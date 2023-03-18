@@ -5,10 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "preexport": "npm run build",
+    "export": "next export",
+    "prestart": "npm run export",
+    "start": "serve out",
     "lint": "next lint"
   },
   "dependencies": {
+    "@corpus/features.wallet.connect": "^0.0.7",
     "@heroicons/react": "^1.0.5",
     "@openbook-dex/openbook": "^0.0.4",
     "@openbook-dex/swap": "^0.0.4",
@@ -24,7 +28,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "next": "^12.2.5",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "serve": "^14.2.0"
   },
   "devDependencies": {
     "@types/node": "16.11.12",
