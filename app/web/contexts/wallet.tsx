@@ -3,7 +3,6 @@ import {
   ConnectionProvider,
   WalletProvider,
 } from '@solana/wallet-adapter-react'
-import { PhantomWalletAdapter } from '@solana/wallet-adapter-wallets'
 import { FC, ReactNode, useMemo } from 'react'
 
 export const WalletConnectionProvider: FC<{ children: ReactNode }> = ({

@@ -34,8 +34,6 @@ export const MarketProvider: FC<{ children?: ReactNode }> = ({ children }) => {
   const [ohlcv, setOhlcv] = useState<any>(null)
   const [market, setMarket] = useState<any>(null)
 
-  console.log(market)
-
   // Hard-coding SOL/USDC values for now,
   // make dynamic later
   const getMarket = async () => {

@@ -43,7 +43,7 @@ export const ManageTrades: VFC = () => {
       </div>
 
       <div className="flex px-4 py-2">
-        {activeTab === 'openOrders' && <OpenOrders />}
+        {/* {activeTab === 'openOrders' && <OpenOrders />} */}
         {activeTab === 'tradeHistory' && <TradeHistory />}
       </div>
     </section>

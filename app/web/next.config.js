@@ -9,6 +9,9 @@ const withTM = require('next-transpile-modules')([
 module.exports = withTM({
   output: 'export',
   reactStrictMode: true,
+  publicRuntimeConfig: {
+    USDC_REF_ADDRESS: process.env.USDC_REF_ADDRESS,
+  },
   webpack: (config) => {
     config.module.rules
       .filter(({ loader }) => loader === 'babel-loader')

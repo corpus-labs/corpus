@@ -5,26 +5,26 @@ import { Order } from '@openbook-dex/openbook/lib/market'
 import clsx from 'clsx'
 import { Transaction } from '@solana/web3.js'
 
-export const OpenOrders: React.VFC = () => {
+export const OpenOrders: React.FC = () => {
   const { market } = useMarketContext()
   const { publicKey, sendTransaction } = useWallet()
   const { connection } = useConnection()
   const [openOrders, setOpenOrders] = useState<Order[] | null>(null)
 
   const getOpenOrders = async () => {
-    if (market && publicKey) {
-      const orders = await market.loadOrdersForOwner(
-        connection,
-        publicKey,
-        30000
-      )
-      const fills = await market.loadFills(connection, 10000)
-      const openOrdersAccounts = await market.findOpenOrdersAccountsForOwner(
-        connection,
-        publicKey
-      )
-      setOpenOrders(orders)
-    }
+    // if (market && publicKey) {
+    //   const orders = await market.loadOrdersForOwner(
+    //     connection,
+    //     publicKey,
+    //     30000
+    //   )
+    //   const fills = await market.loadFills(connection, 10000)
+    //   const openOrdersAccounts = await market.findOpenOrdersAccountsForOwner(
+    //     connection,
+    //     publicKey
+    //   )
+    //   setOpenOrders(orders)
+    // }
   }
 
   useEffect(() => {

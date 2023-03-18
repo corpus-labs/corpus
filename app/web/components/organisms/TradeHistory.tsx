@@ -10,7 +10,7 @@ export const TradeHistory: React.VFC = () => {
   const [fills, setFills] = useState<any>(null)
 
   const getFills = async () => {
-    if (market && publicKey) {
+    if (market) {
       const fills = await market.loadFills(connection, 10000)
       const openOrdersAccounts = await market.findOpenOrdersAccountsForOwner(
         connection,
