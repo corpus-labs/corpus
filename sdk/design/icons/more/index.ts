@@ -1,0 +1,1 @@
+export { MoreIcon } from './more';

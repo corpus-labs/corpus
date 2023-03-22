@@ -1,0 +1,1 @@
+export { SwapIcon } from './swap';

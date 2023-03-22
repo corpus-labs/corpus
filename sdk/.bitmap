@@ -11,21 +11,99 @@
 {
     "envs/tailwind-react": {
         "scope": "corpus.utils",
-        "version": "0.0.9",
+        "version": "0.0.11",
         "mainFile": "index.ts",
         "rootDir": "utils/envs/tailwind-react"
     },
+    "icons/borrow": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "corpus.design",
+        "mainFile": "index.ts",
+        "rootDir": "design/icons/borrow",
+        "config": {
+            "corpus.utils/envs/tailwind-react": {},
+            "teambit.envs/envs": {
+                "env": "corpus.utils/envs/tailwind-react"
+            }
+        }
+    },
+    "icons/more": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "corpus.design",
+        "mainFile": "index.ts",
+        "rootDir": "design/icons/more",
+        "config": {
+            "corpus.utils/envs/tailwind-react": {},
+            "teambit.envs/envs": {
+                "env": "corpus.utils/envs/tailwind-react"
+            }
+        }
+    },
+    "icons/swap": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "corpus.design",
+        "mainFile": "index.ts",
+        "rootDir": "design/icons/swap",
+        "config": {
+            "corpus.utils/envs/tailwind-react": {},
+            "teambit.envs/envs": {
+                "env": "corpus.utils/envs/tailwind-react"
+            }
+        }
+    },
+    "icons/trade": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "corpus.design",
+        "mainFile": "index.ts",
+        "rootDir": "design/icons/trade",
+        "config": {
+            "corpus.utils/envs/tailwind-react": {},
+            "teambit.envs/envs": {
+                "env": "corpus.utils/envs/tailwind-react"
+            }
+        }
+    },
+    "icons/wallet": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "corpus.design",
+        "mainFile": "index.ts",
+        "rootDir": "design/icons/wallet",
+        "config": {
+            "corpus.utils/envs/tailwind-react": {},
+            "teambit.envs/envs": {
+                "env": "corpus.utils/envs/tailwind-react"
+            }
+        }
+    },
     "layouts/header": {
         "scope": "corpus.design",
-        "version": "0.0.6",
+        "version": "0.0.9",
         "mainFile": "index.ts",
         "rootDir": "design/layouts/header"
     },
     "layouts/hero": {
         "scope": "corpus.design",
-        "version": "0.0.6",
+        "version": "0.0.8",
         "mainFile": "index.ts",
         "rootDir": "design/layouts/hero"
+    },
+    "layouts/shell": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "corpus.design",
+        "mainFile": "index.ts",
+        "rootDir": "design/layouts/shell",
+        "config": {
+            "corpus.utils/envs/tailwind-react": {},
+            "teambit.envs/envs": {
+                "env": "corpus.utils/envs/tailwind-react"
+            }
+        }
     },
     "themes/default": {
         "scope": "corpus.utils",
@@ -35,15 +113,21 @@
     },
     "wallet/connect": {
         "scope": "corpus.features",
-        "version": "0.0.7",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "features/wallet/connect"
     },
     "wallet/provider": {
         "scope": "corpus.features",
-        "version": "0.0.1",
+        "version": "0.0.4",
         "mainFile": "index.ts",
-        "rootDir": "features/wallet/provider"
+        "rootDir": "features/wallet/provider",
+        "config": {
+            "corpus.utils/envs/tailwind-react": {},
+            "teambit.envs/envs": {
+                "env": "corpus.utils/envs/tailwind-react"
+            }
+        }
     },
     "$schema-version": "15.5.0"
 }
