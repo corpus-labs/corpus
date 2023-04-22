@@ -1,4 +1,5 @@
 import React, { ChangeEvent, FormEvent, useState, useEffect } from 'react'
+import * as anchor from '@coral-xyz/anchor'
 import { PublicKey, Transaction } from '@solana/web3.js'
 import {
   useWallet,
@@ -14,6 +15,7 @@ import { Label } from '../atoms/Label'
 import { Input } from '../atoms/Input'
 import { getAssociatedTokenAccount } from '../../utils/getAssociatedTokenAccount'
 import clsx from 'clsx'
+import idl from '../../utils/openbook_dca.json'
 
 export const PositionForm = () => {
   const wallet = useWallet()

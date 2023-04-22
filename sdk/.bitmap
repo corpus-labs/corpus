@@ -105,6 +105,19 @@
             }
         }
     },
+    "openbook/swap": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "corpus.features",
+        "mainFile": "index.ts",
+        "rootDir": "features/openbook/swap",
+        "config": {
+            "corpus.utils/envs/tailwind-react": {},
+            "teambit.envs/envs": {
+                "env": "corpus.utils/envs/tailwind-react"
+            }
+        }
+    },
     "themes/default": {
         "scope": "corpus.utils",
         "version": "0.0.7",

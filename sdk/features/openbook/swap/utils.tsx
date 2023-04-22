@@ -4,7 +4,7 @@ import {
   sendAndConfirmTransaction,
   Transaction,
   Connection,
-} from '@solana/web3.js'
+} from '@solana/web3.js';
 import {
   Account,
   createAssociatedTokenAccountInstruction,
@@ -14,24 +14,26 @@ import {
   TokenInvalidAccountOwnerError,
   TOKEN_PROGRAM_ID,
   ASSOCIATED_TOKEN_PROGRAM_ID,
-} from '@solana/spl-token'
-import { WalletContextState } from '@solana/wallet-adapter-react'
+} from '@solana/spl-token';
+import { WalletContextState } from '@solana/wallet-adapter-react';
 
 export const getAssociatedTokenAccount = async (
   mint: PublicKey,
-  owner: PublicKey,
   wallet: WalletContextState,
   connection: Connection,
   commitment?: Commitment,
   programId = TOKEN_PROGRAM_ID
 ) => {
-  const { publicKey, sendTransaction } = wallet
-  const associatedToken = await getAssociatedTokenAddress(mint, owner)
+  const { publicKey, sendTransaction } = wallet;
+  const associatedToken = await getAssociatedTokenAddress(
+    mint,
+    wallet.publicKey
+  );
 
-  let account: Account
+  let account: Account;
 
   if (!publicKey) {
-    return
+    return;
   }
 
   try {
@@ -40,7 +42,7 @@ export const getAssociatedTokenAccount = async (
       associatedToken,
       commitment,
       programId
-    )
+    );
   } catch (error: unknown) {
     if (
       error instanceof TokenAccountNotFoundError ||
@@ -54,25 +56,25 @@ export const getAssociatedTokenAccount = async (
           createAssociatedTokenAccountInstruction(
             publicKey,
             associatedToken,
-            owner,
+            publicKey,
             mint,
             programId,
             ASSOCIATED_TOKEN_PROGRAM_ID
           )
-        )
+        );
 
-        await sendTransaction(transaction, connection)
+        await sendTransaction(transaction, connection);
       } catch (error: unknown) {}
       account = await getAccount(
         connection,
         associatedToken,
         commitment,
         programId
-      )
+      );
     } else {
-      // throw error
+      throw error;
     }
   }
 
-  return account
-}
+  return account;
+};

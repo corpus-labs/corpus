@@ -1,0 +1,226 @@
+{
+  "version": "0.1.0",
+  "name": "openbook_dca",
+  "instructions": [
+    {
+      "name": "dcaCreate",
+      "accounts": [
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "authorityCoinVault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authorityPcVault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "associatedTokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "dexProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "dca",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "dcaCoinVault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "dcaPcVault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "market",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "coinMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "pcMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "swapAmount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "dcaUpdate",
+      "accounts": [
+        {
+          "name": "dca",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "market",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "payer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "swapAmount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "dcaDelete",
+      "accounts": [
+        {
+          "name": "authority",
+          "isMut": false,
+          "isSigner": true,
+          "docs": ["The authority (owner) of the dca."]
+        },
+        {
+          "name": "closeTo",
+          "isMut": true,
+          "isSigner": false,
+          "docs": ["The address to return the data rent lamports to."]
+        },
+        {
+          "name": "dca",
+          "isMut": true,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "swap",
+      "accounts": [
+        {
+          "name": "authorityCoinVault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authorityPcVault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "dexProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "dca",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "dcaCoinVault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "dcaPcVault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Dca",
+      "docs": ["* Dca"],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "market",
+            "type": "publicKey"
+          },
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "pcMint",
+            "type": "publicKey"
+          },
+          {
+            "name": "coinMint",
+            "type": "publicKey"
+          },
+          {
+            "name": "swapAmount",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "address": "6LbR2Zur89bdFiAzGeUwAZDEqcbC2mBLke1vYVPbPVYu"
+  }
+}
