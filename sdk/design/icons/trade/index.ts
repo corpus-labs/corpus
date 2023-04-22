@@ -1,0 +1,1 @@
+export { TradeIcon } from './trade';

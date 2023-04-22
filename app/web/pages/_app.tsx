@@ -1,32 +1,30 @@
 import { ReactNode, FC } from 'react'
 import type { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
-import { WalletModalProvider } from '@solana/wallet-adapter-react-ui'
 // import { CorpusProvider } from '../contexts/corpus'
 import { MarketProvider } from '../contexts/market'
+import { Wallet } from '@project-serum/anchor'
 
 require('../styles/globals.css')
 require('../styles/wallet-adapter.css')
 
-const WalletConnectionProvider = dynamic<{ children: ReactNode }>(
+const WalletProvider = dynamic<{ children: ReactNode }>(
   () =>
-    import('../contexts/wallet').then(
-      ({ WalletConnectionProvider }) => WalletConnectionProvider
+    import('@corpus/features.wallet.provider').then(
+      ({ WalletProvider }) => WalletProvider
     ),
   {
-    ssr: false,
+    ssr: true,
   }
 )
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <WalletConnectionProvider>
-      <WalletModalProvider>
-        <MarketProvider>
-          <Component {...pageProps} />
-        </MarketProvider>
-      </WalletModalProvider>
-    </WalletConnectionProvider>
+    <WalletProvider>
+      <MarketProvider>
+        <Component {...pageProps} />
+      </MarketProvider>
+    </WalletProvider>
   )
 }
 

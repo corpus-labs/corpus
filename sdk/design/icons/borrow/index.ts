@@ -1,0 +1,1 @@
+export { BorrowIcon } from './borrow';

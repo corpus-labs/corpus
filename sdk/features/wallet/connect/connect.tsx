@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 import {
   WalletModalButton,
@@ -18,8 +18,11 @@ export type ConnectProps = {
 };
 
 export function WalletConnect({ buttonText }: ConnectProps) {
-  // const [ethereum, setEthereum] = useState<any>(null);
-  const { wallet } = useWallet();
+  const { connected } = useWallet();
 
-  return wallet ? <WalletDisconnectButton className={buttonStyles} /> : <WalletModalButton className={buttonStyles} />;
+  return connected ? (
+    <WalletDisconnectButton className={buttonStyles} data-testid="wallet-connect" />
+  ) : (
+    <WalletModalButton className={buttonStyles} data-testid="wallet-disconnect" />
+  );
 }

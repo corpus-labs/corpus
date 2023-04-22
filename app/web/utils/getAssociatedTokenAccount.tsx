@@ -70,7 +70,7 @@ export const getAssociatedTokenAccount = async (
         programId
       )
     } else {
-      throw error
+      // throw error
     }
   }
 

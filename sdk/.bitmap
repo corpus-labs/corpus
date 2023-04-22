@@ -11,21 +11,63 @@
 {
     "envs/tailwind-react": {
         "scope": "corpus.utils",
-        "version": "0.0.9",
+        "version": "0.0.12",
         "mainFile": "index.ts",
         "rootDir": "utils/envs/tailwind-react"
     },
+    "icons/borrow": {
+        "scope": "corpus.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/icons/borrow"
+    },
+    "icons/more": {
+        "scope": "corpus.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/icons/more"
+    },
+    "icons/swap": {
+        "scope": "corpus.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/icons/swap"
+    },
+    "icons/trade": {
+        "scope": "corpus.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/icons/trade"
+    },
+    "icons/wallet": {
+        "scope": "corpus.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/icons/wallet"
+    },
     "layouts/header": {
         "scope": "corpus.design",
-        "version": "0.0.6",
+        "version": "0.0.10",
         "mainFile": "index.ts",
         "rootDir": "design/layouts/header"
     },
     "layouts/hero": {
         "scope": "corpus.design",
-        "version": "0.0.6",
+        "version": "0.0.9",
         "mainFile": "index.ts",
         "rootDir": "design/layouts/hero"
+    },
+    "layouts/shell": {
+        "scope": "corpus.design",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "design/layouts/shell"
+    },
+    "openbook/swap": {
+        "scope": "corpus.features",
+        "version": "0.0.1",
+        "mainFile": "index.ts",
+        "rootDir": "features/openbook/swap"
     },
     "themes/default": {
         "scope": "corpus.utils",
@@ -35,13 +77,13 @@
     },
     "wallet/connect": {
         "scope": "corpus.features",
-        "version": "0.0.7",
+        "version": "0.0.11",
         "mainFile": "index.ts",
         "rootDir": "features/wallet/connect"
     },
     "wallet/provider": {
         "scope": "corpus.features",
-        "version": "0.0.1",
+        "version": "0.0.5",
         "mainFile": "index.ts",
         "rootDir": "features/wallet/provider"
     },
