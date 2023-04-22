@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Connection, PublicKey } from '@solana/web3.js';
 import { Market } from '@openbook-dex/openbook';
+import '@openbook-dex/tokens';
 import { WalletProvider } from '@corpus/features.wallet.provider';
 import { Shell } from '@corpus/design.layouts.shell';
 import { OpenbookSwap } from './swap';

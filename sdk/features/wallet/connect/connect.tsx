@@ -21,8 +21,8 @@ export function WalletConnect({ buttonText }: ConnectProps) {
   const { connected } = useWallet();
 
   return connected ? (
-    <WalletDisconnectButton className={buttonStyles} />
+    <WalletDisconnectButton className={buttonStyles} data-testid="wallet-connect" />
   ) : (
-    <WalletModalButton className={buttonStyles} />
+    <WalletModalButton className={buttonStyles} data-testid="wallet-disconnect" />
   );
 }

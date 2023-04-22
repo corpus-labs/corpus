@@ -51,7 +51,7 @@ const menuItems: PrimaryNavItem[] = [
 
 export function Shell({ children, menu = menuItems }: ShellProps) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="shell">
       {/* <header
         className={clsx(
           'flex',
@@ -100,6 +100,7 @@ export function Shell({ children, menu = menuItems }: ShellProps) {
                   [styles.navItemInactive]: !isActive,
                   [styles.navItemActive]: isActive,
                 })}
+                key={text}
               >
                 <span className={clsx()}>{icon}</span>
                 {text}

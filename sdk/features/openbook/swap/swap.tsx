@@ -73,7 +73,7 @@ export function OpenbookSwap({ market }: SwapProps) {
   };
 
   return publicKey ? (
-    <form className="hidden md:flex flex-col h-full w-1/4 min-w-[300px] border-r border-zinc-800">
+    <form className="hidden md:flex flex-col h-full w-1/4 min-w-[300px] border-r border-zinc-800" data-testid="swap-form">
       <div className="flex items-center justify-between px-4 w-full border-b border-zinc-800 h-[80px]">
         <div className="flex flex-col justify-center">
           <span className="text-gray-400 text-sm">Swap</span>
