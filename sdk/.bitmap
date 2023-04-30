@@ -9,6 +9,19 @@
  */
 
 {
+    "charts/candlestick": {
+        "scope": "",
+        "version": "",
+        "defaultScope": "corpus.features",
+        "mainFile": "index.ts",
+        "rootDir": "features/charts/candlestick",
+        "config": {
+            "corpus.utils/envs/tailwind-react": {},
+            "teambit.envs/envs": {
+                "env": "corpus.utils/envs/tailwind-react"
+            }
+        }
+    },
     "envs/tailwind-react": {
         "scope": "corpus.utils",
         "version": "0.0.12",
